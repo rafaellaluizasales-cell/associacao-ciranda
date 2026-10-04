@@ -47,11 +47,12 @@ const proximosEventos = agenda.filter(a => a.destaqueHome).slice(0, 3);
         <div class="lg:col-span-6">
           <div class="relative rounded-3xl overflow-hidden shadow-elevated border-4 border-white">
             <img 
-              src="/images/cultura-em-movimento.jpg" 
-              alt="Projeto Cultura em Movimento - Ciranda" 
-              class="w-full h-96 object-cover"
+              src="/images/dsc07428.jpg" 
+              alt="Vivência e Formação Teatral - Associação Cultural Ciranda" 
+              class="w-full h-96 object-cover cursor-pointer hover:scale-105 transition duration-500"
+              onclick="if(window.openImageModal){ window.openImageModal('/images/dsc07428.jpg', 'Vivência e Formação Teatral - Barra do Garças / MT'); }"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-6 text-white">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent flex items-end p-6 text-white pointer-events-none">
               <div>
                 <p class="text-xs uppercase tracking-wider text-ciranda-amber font-bold">Barra do Garças / MT</p>
                 <p class="text-lg font-serif font-bold">Vivência e Formação Teatral</p>
