@@ -29,28 +29,16 @@
     "duracao": "Ação Realizada (Março/2026)",
     "classificacao": "Livre",
     "status": "Evento Realizado",
-    "imagem": "/images/elevador-quebrado.png",
+    "imagem": "/images/elevador-quebrado/IMG_9682.jpg",
     "destaqueHome": true,
     "galeria": [
-      "/images/elevador-quebrado.png"
-    ]
-  },
-  {
-    "id": "ciranda-teatral",
-    "slug": "ciranda-teatral",
-    "titulo": "Ciranda Teatral",
-    "categoria": "Teatro & Formação",
-    "resumo": "Núcleo permanente de criação cênica, pesquisa dramática e montagem de espetáculos comunitários.",
-    "sinopse": "O núcleo Ciranda Teatral promove vivências contínuas de atuação e jogos cênicos para o desenvolvimento artístico e comunitário em Barra do Garças.",
-    "direcao": "Juliane Maciel Coelho (Ju)",
-    "elencoFicha": "Elenco em formação e artistas colaboradores da Associação Cultural Ciranda.",
-    "duracao": "Projeto Permanente",
-    "classificacao": "Livre",
-    "status": "Em andamento",
-    "imagem": "https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?auto=format&fit=crop&w=1200&q=80",
-    "destaqueHome": true,
-    "galeria": [
-      "https://images.unsplash.com/photo-1460723237483-7a6dc9d0b212?auto=format&fit=crop&w=800&q=80"
+      "/images/elevador-quebrado/IMG_9682.jpg",
+      "/images/elevador-quebrado/IMG_9718.jpg",
+      "/images/elevador-quebrado/IMG_9696.jpg",
+      "/images/elevador-quebrado/IMG_9766.jpg",
+      "/images/elevador-quebrado/IMG_9670.jpg",
+      "/images/elevador-quebrado/IMG_9744.jpg",
+      "/images/elevador-quebrado/IMG_9673.jpg"
     ]
   }
 ]

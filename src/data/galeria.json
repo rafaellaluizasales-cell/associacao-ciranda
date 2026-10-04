@@ -7,24 +7,52 @@
     "legenda": "Oficinas gratuitas de teatro e artesanato em diversos bairros e polos de Barra do Garças."
   },
   {
-    "id": "gal-elevador-quebrado",
+    "id": "gal-elevador-9682",
     "titulo": "Espetáculo O Elevador Quebrado na UFMT",
     "categoria": "Apresentações",
-    "url": "/images/elevador-quebrado.png",
+    "url": "/images/elevador-quebrado/IMG_9682.jpg",
     "legenda": "Juliane Coelho e estudantes da EE São Miguel no auditório da UFMT em Pontal do Araguaia."
   },
   {
-    "id": "gal-01",
-    "titulo": "Ensaio Geral Teatral",
-    "categoria": "Teatro",
-    "url": "https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?auto=format&fit=crop&w=1000&q=80",
-    "legenda": "Momento de preparação e construção cênica durante os ensaios."
+    "id": "gal-elevador-9718",
+    "titulo": "Apresentação Teatral O Elevador Quebrado",
+    "categoria": "Apresentações",
+    "url": "/images/elevador-quebrado/IMG_9718.jpg",
+    "legenda": "Momento da encenação da peça teatral 'O Elevador Quebrado'."
   },
   {
-    "id": "gal-02",
-    "titulo": "Roda de Expressão Corporal",
-    "categoria": "Oficinas",
-    "url": "https://images.unsplash.com/photo-1514306191717-452ec28c7814?auto=format&fit=crop&w=1000&q=80",
-    "legenda": "Exercício de movimento e desinibição com alunos da Ciranda."
+    "id": "gal-elevador-9696",
+    "titulo": "Mediação Cultural e Debate UFMT",
+    "categoria": "Apresentações",
+    "url": "/images/elevador-quebrado/IMG_9696.jpg",
+    "legenda": "Roda de conversa e mediação reflexiva com os estudantes."
+  },
+  {
+    "id": "gal-elevador-9766",
+    "titulo": "Encenação e Expressão Cênica",
+    "categoria": "Apresentações",
+    "url": "/images/elevador-quebrado/IMG_9766.jpg",
+    "legenda": "Cena do espetáculo 'O Elevador Quebrado' de João Luiz do Couto."
+  },
+  {
+    "id": "gal-elevador-9670",
+    "titulo": "Público e Estudantes na UFMT",
+    "categoria": "Apresentações",
+    "url": "/images/elevador-quebrado/IMG_9670.jpg",
+    "legenda": "Estudantes da EE São Miguel acompanhando o espetáculo."
+  },
+  {
+    "id": "gal-elevador-9744",
+    "titulo": "Interação Territorial & Leitura Social",
+    "categoria": "Apresentações",
+    "url": "/images/elevador-quebrado/IMG_9744.jpg",
+    "legenda": "Atividade de formação cultural e territorial em Pontal do Araguaia."
+  },
+  {
+    "id": "gal-elevador-9673",
+    "titulo": "Encerramento e Agradecimentos",
+    "categoria": "Apresentações",
+    "url": "/images/elevador-quebrado/IMG_9673.jpg",
+    "legenda": "Equipe e participantes ao final da apresentação."
   }
 ]

@@ -30,8 +30,19 @@ import oficinas from '../data/oficinas.json';
         {oficinas.map((oficina) => (
           <div class="bg-white rounded-3xl p-8 border border-ciranda-border shadow-soft flex flex-col justify-between space-y-6">
             <div class="space-y-4">
-              <div class="flex items-center justify-between">
-                <span class="badge-tag">{oficina.status}</span>
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <div class="flex items-center gap-2">
+                  <span class="px-3 py-1 rounded-full text-xs font-bold bg-amber-100 text-amber-900 border border-amber-200">
+                    {oficina.andamento || 'Em Andamento'}
+                  </span>
+                  <span class={`px-3 py-1 rounded-full text-xs font-bold ${
+                    oficina.status === 'Inscrições Abertas' 
+                      ? 'bg-emerald-100 text-emerald-800 border border-emerald-300' 
+                      : 'bg-stone-100 text-stone-600 border border-stone-300'
+                  }`}>
+                    {oficina.status}
+                  </span>
+                </div>
                 <span class="text-xs font-bold text-ciranda-terracotta">{oficina.investimento}</span>
               </div>
 
@@ -52,9 +63,15 @@ import oficinas from '../data/oficinas.json';
             </div>
 
             <div>
-              <a href="#inscricao" class="btn-primary w-full text-xs font-bold uppercase tracking-wider">
-                Garantir Minha Vaga nesta Oficina
-              </a>
+              {oficina.status === 'Inscrições Abertas' ? (
+                <a href="#inscricao" class="btn-primary w-full text-xs font-bold uppercase tracking-wider text-center block">
+                  Garantir Minha Vaga nesta Oficina
+                </a>
+              ) : (
+                <a href="#inscricao" class="w-full block text-center px-4 py-3 rounded-full text-xs font-bold uppercase tracking-wider bg-stone-100 text-stone-600 border border-stone-200 hover:bg-stone-200 transition">
+                  Turma em Andamento (Inscrições Encerradas)
+                </a>
+              )}
             </div>
           </div>
         ))}

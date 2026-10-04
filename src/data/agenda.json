@@ -22,20 +22,7 @@
     "local": "CCVV — Parceria Curicaca Criativa",
     "entrada": "Gratuito",
     "descricao": "Oficinas voltadas ao público surdo promovendo inclusão e expressão cênica em LIBRAS e teatro de gestos.",
-    "status": "Ativo",
-    "destaqueHome": true
-  },
-  {
-    "id": "evt-elevador-quebrado",
-    "titulo": "Espetáculo & Mediação: O Elevador Quebrado",
-    "tipo": "Formação Territorial / Evento Realizado",
-    "data": "2026-03-02",
-    "dataExibicao": "02 de Março de 2026",
-    "horario": "Manhã",
-    "local": "Auditório da UFMT — Campus Pontal do Araguaia",
-    "entrada": "Evento Concluído",
-    "descricao": "Apresentação da peça 'O Elevador Quebrado' de João Luiz do Couto com debate reflexivo para estudantes da EE São Miguel.",
-    "status": "Realizado",
+    "status": "Em Andamento",
     "destaqueHome": true
   }
 ]

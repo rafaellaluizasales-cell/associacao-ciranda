@@ -1,6 +1,6 @@
 [
   {
-    "id": "teatro-aberto-público",
+    "id": "teatro-aberto-publico",
     "titulo": "Turma de Teatro — Aberta ao Público Geral",
     "publicoAlvo": "Público Geral (Jovens e Adultos)",
     "instrutor": "Juliane Coelho (Coordenadora do Projeto Cultura em Movimento)",
@@ -9,9 +9,10 @@
     "vagas": 25,
     "investimento": "Gratuito",
     "status": "Inscrições Abertas",
+    "andamento": "Em Andamento",
     "localizacao": "CCVV e ALCARTES (Academia de Cultura e Artes do Centro-Oeste)",
     "descricao": "Turma de teatro aberta a toda a comunidade. Iniciação às artes cênicas, interpretação, jogos dramáticos e desinibição.",
-    "requisitos": "Aberto ao público em geral. Entrar em contato pelo WhatsApp (66) 98434-0745 para garantir vaga."
+    "requisitos": "Aberto ao público em geral. Entrar em contato pelo WhatsApp para garantir vaga."
   },
   {
     "id": "teatro-em-silencio",
@@ -22,10 +23,11 @@
     "horario": "Aos Sábados",
     "vagas": 20,
     "investimento": "Gratuito",
-    "status": "Inscrições Abertas",
+    "status": "Inscrições Encerradas",
+    "andamento": "Em Andamento",
     "localizacao": "CCVV (Centro Cultural)",
     "descricao": "Iniciativa pioneira voltada à acessibilidade e formação cultural para o público surdo por meio do teatro físico e expressão visual.",
-    "requisitos": "Inscrições abertas para a comunidade surda e interessados em arte inclusiva."
+    "requisitos": "Turma em andamento. Inscrições temporariamente encerradas para novas vagas."
   },
   {
     "id": "oficinas-artesanato",
@@ -36,10 +38,11 @@
     "horario": "Diversos horários por polo",
     "vagas": 30,
     "investimento": "Gratuito",
-    "status": "Ativo em 6 Polos",
+    "status": "Inscrições Encerradas",
+    "andamento": "Em Andamento em 6 Polos",
     "localizacao": "CRAS Construir (Novo Horizonte), Casa da Família (St. Antônio), EECMM José Ângelo, Centro Juvenil Dom Bosco, Associação Sena Marques/Mangueiras e CSU (Pontal do Araguaia)",
     "descricao": "Ações de formação artesanal descentralizadas para geração de renda, estímulo à criatividade e convivência comunitária.",
-    "requisitos": "Inscrições nos próprios locais parceiros ou pelo telefone (66) 98434-0745."
+    "requisitos": "Turmas em andamento nos polos parceiros. Inscrições encerradas."
   },
   {
     "id": "teatro-institutos-apae",
@@ -50,9 +53,10 @@
     "horario": "Horários específicos por instituição",
     "vagas": 20,
     "investimento": "Gratuito",
-    "status": "Em andamento",
+    "status": "Inscrições Encerradas",
+    "andamento": "Em Andamento",
     "localizacao": "UFMT, IFMT, APAE Barra do Garças / Aragarças e Barracão da Vila Maria",
     "descricao": "Formação teatral direcionada a universidades, escolas técnicas, instituições de apoio especial e associações de moradores.",
-    "requisitos": "Para alunos das instituições parceiras e moradores da comunidade Vila Maria."
+    "requisitos": "Turmas semestrais em andamento nas instituições parceiras."
   }
 ]

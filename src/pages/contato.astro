@@ -64,11 +64,6 @@ import institucional from '../data/institucional.json';
                   {institucional.contato.email}
                 </a>
               </div>
-
-              <div>
-                <span class="block text-xs uppercase font-bold text-stone-500">Endereço da Sede</span>
-                <p class="mt-1 leading-relaxed">{institucional.endereco.completo}</p>
-              </div>
             </div>
 
             <!-- Quick WhatsApp Button -->
@@ -84,13 +79,21 @@ import institucional from '../data/institucional.json';
             </div>
           </div>
 
-          <!-- Location Map Placeholder Card -->
-          <div class="bg-ciranda-card p-6 rounded-3xl border border-ciranda-border shadow-soft space-y-3">
-            <span class="badge-tag">Barra do Garças / MT</span>
-            <h4 class="font-serif font-bold text-ciranda-brown text-lg">Como Chegar</h4>
-            <p class="text-xs text-stone-600">
-              Nossa sede física fica localizada no bairro Jardim Nova Barra do Garças (Rua Frei Felipe, Q. 285 L. 4), Barra do Garças / MT, CEP 78606-448.
-            </p>
+          <!-- Location Card with City & State -->
+          <div class="bg-ciranda-card p-6 rounded-3xl border border-ciranda-border shadow-soft flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <svg class="w-6 h-6 text-ciranda-terracotta shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              <div>
+                <span class="block text-xs uppercase font-bold text-stone-500">Localização</span>
+                <span class="font-bold text-ciranda-brown text-base">{institucional.endereco.cidade} / {institucional.endereco.uf}</span>
+              </div>
+            </div>
+            <span class="inline-flex items-center px-4 py-2 rounded-full bg-amber-100/90 text-ciranda-brown text-xs font-bold uppercase tracking-wider border border-amber-200 shadow-xs">
+              {institucional.endereco.cidade.toUpperCase()} / {institucional.endereco.uf}
+            </span>
           </div>
 
         </div>
