@@ -1,0 +1,94 @@
+---
+import institucional from '../data/institucional.json';
+---
+
+<section class="relative overflow-hidden bg-gradient-to-b from-ciranda-cream via-white to-ciranda-cream py-16 sm:py-24 lg:py-28 border-b border-ciranda-border">
+  
+  <!-- Soft Background Decorative Shapes -->
+  <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-ciranda-amber/10 blur-3xl pointer-events-none"></div>
+  <div class="absolute -bottom-24 -left-24 w-96 h-96 rounded-full bg-ciranda-terracotta/10 blur-3xl pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+      
+      <!-- Text & CTAs -->
+      <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+        
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-ciranda-amber/15 text-ciranda-brown text-xs sm:text-sm font-bold tracking-wide border border-ciranda-amber/30">
+          <span class="w-2 h-2 rounded-full bg-ciranda-terracotta animate-pulse"></span>
+          Teatro, Arte & Formação Cultural em Barra do Garças
+        </div>
+
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-ciranda-brown leading-[1.15] tracking-tight">
+          A cultura viva que gira e transforma vidas.
+        </h1>
+
+        <p class="text-lg sm:text-xl text-stone-700 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+          Seja bem-vindo à <strong class="text-ciranda-brown font-semibold">Associação Cultural CIRANDA</strong>. Nosso palco é a comunidade, nossas peças são histórias reais e nossas oficinas são portas abertas para a arte.
+        </p>
+
+        <!-- Main Action Buttons -->
+        <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+          <a href="/agenda" class="btn-primary w-full sm:w-auto shadow-md">
+            Ver Agenda Cultural
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+          
+          <a href="/oficinas" class="btn-secondary w-full sm:w-auto">
+            Inscreva-se nas Oficinas
+          </a>
+        </div>
+
+        <!-- Highlights Row -->
+        <div class="pt-6 grid grid-cols-3 gap-4 border-t border-ciranda-border max-w-lg mx-auto lg:mx-0 text-center">
+          <div>
+            <span class="block text-2xl sm:text-3xl font-bold font-serif text-ciranda-terracotta">100%</span>
+            <span class="text-xs text-stone-600 font-medium">Gratuito & Acessível</span>
+          </div>
+          <div>
+            <span class="block text-2xl sm:text-3xl font-bold font-serif text-ciranda-brown">+10</span>
+            <span class="text-xs text-stone-600 font-medium">Anos de Atuação</span>
+          </div>
+          <div>
+            <span class="block text-2xl sm:text-3xl font-bold font-serif text-ciranda-olive">MT</span>
+            <span class="text-xs text-stone-600 font-medium">Barra do Garças</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Hero Visual Card / Photo Grid -->
+      <div class="lg:col-span-5 relative">
+        <div class="relative mx-auto max-w-md lg:max-w-none">
+          
+          <div class="relative rounded-3xl overflow-hidden shadow-elevated border-4 border-white bg-white">
+            <img 
+              src="https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?auto=format&fit=crop&w=1000&q=80" 
+              alt="Ciranda Teatral Espetáculo" 
+              class="w-full h-80 sm:h-96 object-cover hover:scale-105 transition duration-700"
+            />
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6 text-white">
+              <span class="text-xs font-bold uppercase tracking-wider text-ciranda-amber mb-1">Próximo Espetáculo</span>
+              <h3 class="text-xl font-bold font-serif">Mar de Histórias</h3>
+              <p class="text-xs text-stone-200 mt-1">15 de Novembro • Barra do Garças / MT</p>
+            </div>
+          </div>
+
+          <!-- Small Floating Badge -->
+          <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-lg border border-ciranda-border flex items-center gap-3 max-w-xs">
+            <img src="/images/logo-ciranda.jpg" alt="Logo Ciranda" class="w-10 h-10 object-contain rounded" />
+            <div>
+              <p class="text-xs font-bold text-ciranda-brown">Arte para Todos</p>
+              <p class="text-[11px] text-stone-500">Participe dos ensaios e apresentações</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

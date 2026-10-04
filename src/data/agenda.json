@@ -1,0 +1,41 @@
+[
+  {
+    "id": "evt-cultura-movimento",
+    "titulo": "Oficina de Teatro — Turma Aberta ao Público",
+    "tipo": "Projeto Cultura em Movimento",
+    "data": "2026-10-15",
+    "dataExibicao": "Toda Quinta-feira",
+    "horario": "19:00",
+    "local": "CCVV e ALCARTES — Barra do Garças / MT",
+    "entrada": "Inscrição Gratuita via WhatsApp",
+    "descricao": "Encontro semanal da turma de teatro aberta ao público em geral. Projeto Cultura em Movimento (Realização Ciranda, FAESPE/UNEMAT e SECEL/MT).",
+    "status": "Inscrições Abertas",
+    "destaqueHome": true
+  },
+  {
+    "id": "evt-teatro-silencio",
+    "titulo": "Oficina Teatro em Silêncio (Público Surdo)",
+    "tipo": "Acessibilidade & Teatro",
+    "data": "2026-10-17",
+    "dataExibicao": "Todos os Sábados",
+    "horario": "Aos Sábados",
+    "local": "CCVV — Parceria Curicaca Criativa",
+    "entrada": "Gratuito",
+    "descricao": "Oficinas voltadas ao público surdo promovendo inclusão e expressão cênica em LIBRAS e teatro de gestos.",
+    "status": "Ativo",
+    "destaqueHome": true
+  },
+  {
+    "id": "evt-elevador-quebrado",
+    "titulo": "Espetáculo & Mediação: O Elevador Quebrado",
+    "tipo": "Formação Territorial / Evento Realizado",
+    "data": "2026-03-02",
+    "dataExibicao": "02 de Março de 2026",
+    "horario": "Manhã",
+    "local": "Auditório da UFMT — Campus Pontal do Araguaia",
+    "entrada": "Evento Concluído",
+    "descricao": "Apresentação da peça 'O Elevador Quebrado' de João Luiz do Couto com debate reflexivo para estudantes da EE São Miguel.",
+    "status": "Realizado",
+    "destaqueHome": true
+  }
+]

@@ -1,0 +1,131 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import institucional from '../../data/institucional.json';
+import projetos from '../../data/projetos.json';
+
+export function getStaticPaths() {
+  return projetos.map((projeto) => ({
+    params: { slug: projeto.slug },
+    props: { projeto },
+  }));
+}
+
+const { projeto } = Astro.props;
+---
+
+<Layout 
+  title={`${projeto.titulo} | Associação Cultural CIRANDA`} 
+  description={projeto.resumo}
+  image={projeto.imagem}
+>
+  <!-- Header Banner -->
+  <section class="relative bg-stone-900 text-white py-20 overflow-hidden">
+    <div class="absolute inset-0 opacity-40">
+      <img src={projeto.imagem} alt={projeto.titulo} class="w-full h-full object-cover blur-sm" />
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/80 to-transparent"></div>
+
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-4">
+      <div class="flex flex-wrap items-center gap-3">
+        <a href="/projetos" class="text-xs text-stone-300 hover:text-ciranda-amber flex items-center gap-1">
+          ← Voltar para Projetos
+        </a>
+        <span class="badge-tag">{projeto.categoria}</span>
+        <span class="text-xs px-2.5 py-0.5 rounded-full bg-stone-800 text-stone-200">{projeto.status}</span>
+      </div>
+
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-white leading-tight">
+        {projeto.titulo}
+      </h1>
+
+      <p class="text-stone-300 text-base sm:text-lg max-w-3xl leading-relaxed">
+        {projeto.resumo}
+      </p>
+    </div>
+  </section>
+
+  <!-- Project Details Body -->
+  <section class="py-16 bg-ciranda-cream">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+        
+        <!-- Main Synopsis Content -->
+        <div class="lg:col-span-8 space-y-8">
+          
+          <div class="bg-white p-8 rounded-3xl border border-ciranda-border shadow-soft space-y-4">
+            <h3 class="text-2xl font-serif font-bold text-ciranda-brown">Sinopse do Espetáculo</h3>
+            <p class="text-stone-700 leading-relaxed whitespace-pre-line text-base">
+              {projeto.sinopse}
+            </p>
+          </div>
+
+          <!-- Gallery Preview if any -->
+          {projeto.galeria && projeto.galeria.length > 0 && (
+            <div class="space-y-4">
+              <h3 class="text-2xl font-serif font-bold text-ciranda-brown">Registros Fotográficos</h3>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {projeto.galeria.map((imgUrl, idx) => (
+                  <img 
+                    src={imgUrl} 
+                    alt={`Foto ${idx + 1} do espetáculo ${projeto.titulo}`} 
+                    class="rounded-2xl h-52 w-full object-cover border border-ciranda-border shadow-soft hover:scale-105 transition duration-300"
+                  />
+                ))}
+              </div>
+            </div>
+          )}
+
+        </div>
+
+        <!-- Sidebar Ficha Técnica & Booking CTA -->
+        <div class="lg:col-span-4 space-y-6">
+          
+          <div class="bg-ciranda-card p-6 rounded-3xl border border-ciranda-border shadow-soft space-y-4">
+            <h4 class="text-lg font-serif font-bold text-ciranda-brown border-b border-ciranda-border pb-3">
+              Ficha Técnica
+            </h4>
+            
+            <div class="space-y-3 text-sm text-stone-700">
+              <div>
+                <span class="block text-xs uppercase font-bold text-stone-500">Direção / Coordenação</span>
+                <span class="font-semibold">{projeto.direcao}</span>
+              </div>
+              <div>
+                <span class="block text-xs uppercase font-bold text-stone-500">Elenco / Equipe</span>
+                <span>{projeto.elencoFicha}</span>
+              </div>
+              <div>
+                <span class="block text-xs uppercase font-bold text-stone-500">Duração Aproximada</span>
+                <span>{projeto.duracao}</span>
+              </div>
+              <div>
+                <span class="block text-xs uppercase font-bold text-stone-500">Classificação Indicativa</span>
+                <span>{projeto.classificacao}</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- WhatsApp Booking CTA -->
+          <div class="bg-ciranda-brown text-white p-6 rounded-3xl shadow-soft space-y-3 text-center">
+            <h4 class="text-lg font-serif font-bold text-ciranda-amber">Leve este Espetáculo</h4>
+            <p class="text-xs text-stone-300">
+              Gostaria de levar este espetáculo para sua cidade, festival, escola ou evento cultural?
+            </p>
+            <a 
+              href={`https://wa.me/${institucional.contato.whatsappRaw}?text=Ol%C3%A1!%20Tenho%20interesse%20em%20contratar/apresentar%20o%20espet%C3%A1culo:%20${encodeURIComponent(projeto.titulo)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-whatsapp w-full text-xs font-bold py-3 uppercase tracking-wider"
+            >
+              Falar no WhatsApp
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+</Layout>

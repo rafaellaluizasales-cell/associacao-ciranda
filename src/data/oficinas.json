@@ -1,0 +1,58 @@
+[
+  {
+    "id": "teatro-aberto-público",
+    "titulo": "Turma de Teatro — Aberta ao Público Geral",
+    "publicoAlvo": "Público Geral (Jovens e Adultos)",
+    "instrutor": "Juliane Coelho (Coordenadora do Projeto Cultura em Movimento)",
+    "duracao": "Aulas semanais contínuas",
+    "horario": "Quintas-feiras, às 19h",
+    "vagas": 25,
+    "investimento": "Gratuito",
+    "status": "Inscrições Abertas",
+    "localizacao": "CCVV e ALCARTES (Academia de Cultura e Artes do Centro-Oeste)",
+    "descricao": "Turma de teatro aberta a toda a comunidade. Iniciação às artes cênicas, interpretação, jogos dramáticos e desinibição.",
+    "requisitos": "Aberto ao público em geral. Entrar em contato pelo WhatsApp (66) 98434-0745 para garantir vaga."
+  },
+  {
+    "id": "teatro-em-silencio",
+    "titulo": "Teatro em Silêncio (Inclusão & Comunidade Surda)",
+    "publicoAlvo": "Público Surdo e Comunidade Inclusiva",
+    "instrutor": "Parceria com Curicaca Criativa (Produtora Anne Carmo) e Ciranda",
+    "duracao": "Encontros aos Sábados",
+    "horario": "Aos Sábados",
+    "vagas": 20,
+    "investimento": "Gratuito",
+    "status": "Inscrições Abertas",
+    "localizacao": "CCVV (Centro Cultural)",
+    "descricao": "Iniciativa pioneira voltada à acessibilidade e formação cultural para o público surdo por meio do teatro físico e expressão visual.",
+    "requisitos": "Inscrições abertas para a comunidade surda e interessados em arte inclusiva."
+  },
+  {
+    "id": "oficinas-artesanato",
+    "titulo": "Oficinas de Artesanato (Projeto Cultura em Movimento)",
+    "publicoAlvo": "Comunidade dos Bairros e Instituições Parceiras",
+    "instrutor": "Equipe de Artesãs do Projeto Cultura em Movimento",
+    "duracao": "Módulos Práticos",
+    "horario": "Diversos horários por polo",
+    "vagas": 30,
+    "investimento": "Gratuito",
+    "status": "Ativo em 6 Polos",
+    "localizacao": "CRAS Construir (Novo Horizonte), Casa da Família (St. Antônio), EECMM José Ângelo, Centro Juvenil Dom Bosco, Associação Sena Marques/Mangueiras e CSU (Pontal do Araguaia)",
+    "descricao": "Ações de formação artesanal descentralizadas para geração de renda, estímulo à criatividade e convivência comunitária.",
+    "requisitos": "Inscrições nos próprios locais parceiros ou pelo telefone (66) 98434-0745."
+  },
+  {
+    "id": "teatro-institutos-apae",
+    "titulo": "Teatro Institucional (UFMT, IFMT, APAE & Vila Maria)",
+    "publicoAlvo": "Alunos matriculados nas instituições e moradores do Barracão da Vila Maria",
+    "instrutor": "Juliane Coelho e Monitores Ciranda",
+    "duracao": "Semestral",
+    "horario": "Horários específicos por instituição",
+    "vagas": 20,
+    "investimento": "Gratuito",
+    "status": "Em andamento",
+    "localizacao": "UFMT, IFMT, APAE Barra do Garças / Aragarças e Barracão da Vila Maria",
+    "descricao": "Formação teatral direcionada a universidades, escolas técnicas, instituições de apoio especial e associações de moradores.",
+    "requisitos": "Para alunos das instituições parceiras e moradores da comunidade Vila Maria."
+  }
+]

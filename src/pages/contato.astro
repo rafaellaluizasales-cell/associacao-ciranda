@@ -1,0 +1,102 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ContactForm from '../components/ContactForm.jsx';
+import institucional from '../data/institucional.json';
+---
+
+<Layout 
+  title="Contato & Localização | Associação Cultural CIRANDA" 
+  description="Entre em contato com a Associação Cultural Ciranda em Barra do Garças / MT. Endereço, telefone, WhatsApp, e-mail e formulário oficial."
+>
+  <section class="bg-ciranda-brown text-white py-16 sm:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full bg-ciranda-amber text-ciranda-brown mb-3">
+        Fale Conosco
+      </span>
+      <h1 class="text-4xl sm:text-5xl font-serif font-bold text-white mb-4">
+        Contato & Localização
+      </h1>
+      <p class="text-stone-300 text-base sm:text-lg max-w-2xl mx-auto">
+        Estamos à disposição para atender você, tirar dúvidas e receber propostas de projetos.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-16 sm:py-24 bg-ciranda-cream">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <!-- Contact Form Column -->
+        <div class="lg:col-span-7">
+          <ContactForm client:load />
+        </div>
+
+        <!-- Institutional Info & Map Column -->
+        <div class="lg:col-span-5 space-y-8">
+          
+          <div class="bg-white p-8 rounded-3xl border border-ciranda-border shadow-soft space-y-6">
+            <h3 class="text-2xl font-serif font-bold text-ciranda-brown border-b border-ciranda-border pb-3">
+              Informações Gerais
+            </h3>
+
+            <div class="space-y-4 text-sm text-stone-700">
+              <div>
+                <span class="block text-xs uppercase font-bold text-stone-500">Nome Oficial</span>
+                <span class="font-semibold text-ciranda-brown">{institucional.razaoSocial}</span>
+              </div>
+
+              <div>
+                <span class="block text-xs uppercase font-bold text-stone-500">CNPJ</span>
+                <span class="font-semibold">{institucional.cnpj}</span>
+              </div>
+
+              <div>
+                <span class="block text-xs uppercase font-bold text-stone-500">WhatsApp / Telefone</span>
+                <a href={institucional.contato.whatsappLink} target="_blank" class="text-emerald-700 font-bold hover:underline">
+                  {institucional.contato.whatsappDisplay}
+                </a>
+              </div>
+
+              <div>
+                <span class="block text-xs uppercase font-bold text-stone-500">E-mail Principal</span>
+                <a href={`mailto:${institucional.contato.email}`} class="text-ciranda-terracotta hover:underline font-medium">
+                  {institucional.contato.email}
+                </a>
+              </div>
+
+              <div>
+                <span class="block text-xs uppercase font-bold text-stone-500">Endereço da Sede</span>
+                <p class="mt-1 leading-relaxed">{institucional.endereco.completo}</p>
+              </div>
+            </div>
+
+            <!-- Quick WhatsApp Button -->
+            <div class="pt-2">
+              <a 
+                href={institucional.contato.whatsappLink} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="btn-whatsapp w-full text-xs font-bold py-3.5 uppercase tracking-wider"
+              >
+                Abrir Conversa Direta no WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <!-- Location Map Placeholder Card -->
+          <div class="bg-ciranda-card p-6 rounded-3xl border border-ciranda-border shadow-soft space-y-3">
+            <span class="badge-tag">Barra do Garças / MT</span>
+            <h4 class="font-serif font-bold text-ciranda-brown text-lg">Como Chegar</h4>
+            <p class="text-xs text-stone-600">
+              Nossa sede física fica localizada no bairro Jardim Nova Barra do Garças (Rua Frei Felipe, Q. 285 L. 4), Barra do Garças / MT, CEP 78606-448.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+</Layout>

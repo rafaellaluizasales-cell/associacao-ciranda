@@ -1,0 +1,39 @@
+---
+import Layout from '../layouts/Layout.astro';
+import EventCard from '../components/EventCard.astro';
+import agenda from '../data/agenda.json';
+---
+
+<Layout 
+  title="Agenda Cultural | Associação Cultural CIRANDA" 
+  description="Confira a programação completa de espetáculos teatrais, apresentações e encontros da Associação Cultural Ciranda."
+>
+  <section class="bg-ciranda-brown text-white py-16 sm:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full bg-ciranda-amber text-ciranda-brown mb-3">
+        Programação
+      </span>
+      <h1 class="text-4xl sm:text-5xl font-serif font-bold text-white mb-4">
+        Agenda Cultural
+      </h1>
+      <p class="text-stone-300 text-base sm:text-lg max-w-2xl mx-auto">
+        Datas, horários e locais dos próximos espetáculos, apresentações e vivências culturais.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-16 sm:py-24 bg-ciranda-cream">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+      
+      {agenda.map((evt) => (
+        <EventCard evento={evt} />
+      ))}
+
+      <!-- Note for Client Content -->
+      <div class="p-6 bg-white rounded-2xl border border-ciranda-border shadow-soft text-center text-xs text-stone-500 mt-8">
+        💡 <strong class="text-ciranda-brown">Nota para a Equipe:</strong> As datas e apresentações são atualizadas periodicamente. Para incluir novas datas ou confirmar eventos, entre em contato direto pelo WhatsApp.
+      </div>
+
+    </div>
+  </section>
+</Layout>

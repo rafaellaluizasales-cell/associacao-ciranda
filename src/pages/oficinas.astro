@@ -1,0 +1,70 @@
+---
+import Layout from '../layouts/Layout.astro';
+import WorkshopForm from '../components/WorkshopForm.jsx';
+import oficinas from '../data/oficinas.json';
+---
+
+<Layout 
+  title="Oficinas & Cursos | Associação Cultural CIRANDA" 
+  description="Participe das oficinas gratuitas de iniciação teatral, jogos dramáticos e expressão artística da Associação Cultural Ciranda."
+>
+  <section class="bg-ciranda-brown text-white py-16 sm:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full bg-ciranda-amber text-ciranda-brown mb-3">
+        Formação Artística
+      </span>
+      <h1 class="text-4xl sm:text-5xl font-serif font-bold text-white mb-4">
+        Oficinas & Cursos Teatrais
+      </h1>
+      <p class="text-stone-300 text-base sm:text-lg max-w-2xl mx-auto">
+        Espaço de aprendizado gratuito, expressão corporal e convivência em Barra do Garças / MT.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-16 sm:py-24 bg-ciranda-cream">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+      
+      <!-- Workshops Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {oficinas.map((oficina) => (
+          <div class="bg-white rounded-3xl p-8 border border-ciranda-border shadow-soft flex flex-col justify-between space-y-6">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="badge-tag">{oficina.status}</span>
+                <span class="text-xs font-bold text-ciranda-terracotta">{oficina.investimento}</span>
+              </div>
+
+              <h2 class="text-2xl font-serif font-bold text-ciranda-brown">
+                {oficina.titulo}
+              </h2>
+
+              <p class="text-stone-700 text-sm leading-relaxed">
+                {oficina.descricao}
+              </p>
+
+              <div class="space-y-2 pt-2 border-t border-ciranda-border text-xs text-stone-600">
+                <p><strong>Público-alvo:</strong> {oficina.publicoAlvo}</p>
+                <p><strong>Duração / Horário:</strong> {oficina.horario}</p>
+                <p><strong>Instrutor(a):</strong> {oficina.instrutor}</p>
+                <p><strong>Requisitos:</strong> {oficina.requisitos}</p>
+              </div>
+            </div>
+
+            <div>
+              <a href="#inscricao" class="btn-primary w-full text-xs font-bold uppercase tracking-wider">
+                Garantir Minha Vaga nesta Oficina
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Registration Form Interactive Box -->
+      <div id="inscricao" class="max-w-3xl mx-auto pt-8">
+        <WorkshopForm client:load oficinas={oficinas} />
+      </div>
+
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,59 @@
+---
+interface Props {
+  projeto: {
+    id: string;
+    slug: string;
+    titulo: string;
+    categoria: string;
+    resumo: string;
+    status: string;
+    imagem: string;
+    duracao?: string;
+  };
+}
+
+const { projeto } = Astro.props;
+---
+
+<article class="bg-ciranda-card rounded-2xl overflow-hidden border border-ciranda-border shadow-soft hover:shadow-elevated transition-all duration-300 flex flex-col group hover:-translate-y-1">
+  <div class="relative h-56 overflow-hidden bg-stone-200">
+    <img 
+      src={projeto.imagem} 
+      alt={projeto.titulo} 
+      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+    />
+    <div class="absolute top-3 left-3 flex gap-2">
+      <span class="badge-tag">
+        {projeto.categoria}
+      </span>
+    </div>
+    <div class="absolute bottom-3 right-3 bg-stone-950/70 backdrop-blur-sm text-white px-2.5 py-1 rounded-full text-xs font-medium">
+      {projeto.status}
+    </div>
+  </div>
+
+  <div class="p-6 flex flex-col flex-grow">
+    <h3 class="text-xl font-bold font-serif text-ciranda-brown group-hover:text-ciranda-terracotta transition-colors mb-2">
+      {projeto.titulo}
+    </h3>
+    
+    <p class="text-sm text-stone-600 leading-relaxed mb-6 flex-grow">
+      {projeto.resumo}
+    </p>
+
+    <div class="pt-4 border-t border-ciranda-border flex items-center justify-between mt-auto">
+      <span class="text-xs font-semibold text-stone-500">
+        {projeto.duracao || 'Projeto Cultural'}
+      </span>
+      <a 
+        href={`/projetos/${projeto.slug}`} 
+        class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-ciranda-terracotta hover:text-ciranda-terracotta-dark group-hover:translate-x-1 transition-all"
+      >
+        Ver Detalhes
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</article>

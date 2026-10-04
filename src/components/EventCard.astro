@@ -1,0 +1,69 @@
+---
+interface Props {
+  evento: {
+    id: string;
+    titulo: string;
+    tipo: string;
+    data: string;
+    dataExibicao: string;
+    horario: string;
+    local: string;
+    entrada: string;
+    descricao: string;
+    status: string;
+  };
+}
+
+const { evento } = Astro.props;
+---
+
+<article class="bg-ciranda-card rounded-2xl p-6 border border-ciranda-border shadow-soft hover:shadow-elevated transition-all duration-300 flex flex-col md:flex-row gap-6 items-start md:items-center">
+  
+  <!-- Date Badge Box -->
+  <div class="bg-ciranda-amber/15 border border-ciranda-amber/30 rounded-2xl p-4 text-center min-w-[110px] shrink-0 w-full md:w-auto">
+    <span class="block text-xs font-bold text-ciranda-terracotta uppercase tracking-wider">Data</span>
+    <span class="block text-sm font-bold text-ciranda-brown mt-1">{evento.dataExibicao}</span>
+    <span class="inline-block mt-2 px-2.5 py-0.5 text-[11px] font-semibold bg-ciranda-brown text-white rounded-full">
+      {evento.horario}
+    </span>
+  </div>
+
+  <!-- Content -->
+  <div class="flex-grow space-y-2">
+    <div class="flex flex-wrap items-center gap-2">
+      <span class="badge-tag">{evento.tipo}</span>
+      <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-200">
+        {evento.entrada}
+      </span>
+    </div>
+
+    <h3 class="text-xl font-serif font-bold text-ciranda-brown">
+      {evento.titulo}
+    </h3>
+
+    <p class="text-sm text-stone-600">
+      {evento.descricao}
+    </p>
+
+    <div class="flex items-center gap-2 text-xs font-medium text-stone-500 pt-1">
+      <svg class="w-4 h-4 text-ciranda-terracotta shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+      </svg>
+      <span>{evento.local}</span>
+    </div>
+  </div>
+
+  <!-- WhatsApp Action -->
+  <div class="shrink-0 w-full md:w-auto pt-2 md:pt-0">
+    <a 
+      href={`https://wa.me/5566984340745?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20evento:%20${encodeURIComponent(evento.titulo)}`}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="btn-whatsapp text-xs py-2.5 px-4 w-full md:w-auto justify-center"
+    >
+      Informações no WhatsApp
+    </a>
+  </div>
+
+</article>

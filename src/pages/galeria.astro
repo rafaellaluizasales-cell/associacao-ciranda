@@ -1,0 +1,30 @@
+---
+import Layout from '../layouts/Layout.astro';
+import LightboxGallery from '../components/LightboxGallery.jsx';
+import fotos from '../data/galeria.json';
+---
+
+<Layout 
+  title="Galeria Cultural | Associação Cultural CIRANDA" 
+  description="Confira as fotos e registros dos espetáculos, ensaios, oficinas e momentos marcantes da Associação Cultural Ciranda."
+>
+  <section class="bg-ciranda-brown text-white py-16 sm:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full bg-ciranda-amber text-ciranda-brown mb-3">
+        Memória Visual
+      </span>
+      <h1 class="text-4xl sm:text-5xl font-serif font-bold text-white mb-4">
+        Galeria de Fotos
+      </h1>
+      <p class="text-stone-300 text-base sm:text-lg max-w-2xl mx-auto">
+        Registros fotográficos das nossas apresentações, bastidores, ensaios e oficinas.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-16 sm:py-24 bg-ciranda-cream">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <LightboxGallery client:load fotos={fotos} />
+    </div>
+  </section>
+</Layout>

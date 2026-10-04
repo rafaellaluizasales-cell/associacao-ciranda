@@ -1,0 +1,56 @@
+[
+  {
+    "id": "cultura-em-movimento",
+    "slug": "cultura-em-movimento",
+    "titulo": "Projeto Cultura em Movimento",
+    "categoria": "Formação & Acessibilidade Cultural",
+    "resumo": "Projeto que amplia o acesso à arte e à cultura em Barra do Garças e região por meio de oficinas de artesanato, teatro descentralizado e ações inclusivas.",
+    "sinopse": "O Projeto Cultura em Movimento é uma grande iniciativa de democratização cultural promovida pela Associação Cultural Ciranda em parceria com a FAESPE/UNEMAT e a SECEL/MT.\n\nCom ações descentralizadas em bairros e instituições, o projeto oferece oficinas gratuitas de artesanato (CRAS Construir, Casa da Família, EECMM José Ângelo, Centro Juvenil Dom Bosco, Associação Comunitária Sena Marques/Jd. Mangueiras e CSU em Pontal do Araguaia) e de teatro (APAE Barra do Garças/Aragarças, UFMT, IFMT, Barracão da Vila Maria e ALCARTES).\n\nUm dos grandes destaques inclusivos é o *Teatro em Silêncio*, voltado especialmente ao público surdo, realizado aos sábados no CCVV em parceria com a Curicaca Criativa e a produtora cultural Anne Carmo.",
+    "direcao": "Juliane Maciel Coelho (Coordenadora)",
+    "elencoFicha": "Realização: Associação Cultural Ciranda | Parceria: FAESPE / UNEMAT / SECEL-MT | Apoio: Instituto João Velho, ALCARTES, Prefeitura de Barra do Garças",
+    "duracao": "Edição Atual (Em andamento)",
+    "classificacao": "Livre",
+    "status": "Projeto Principal Ativo",
+    "imagem": "/images/cultura-em-movimento.jpg",
+    "destaqueHome": true,
+    "galeria": [
+      "/images/cultura-em-movimento.jpg"
+    ]
+  },
+  {
+    "id": "elevador-quebrado",
+    "slug": "elevador-quebrado",
+    "titulo": "O Elevador Quebrado",
+    "categoria": "Teatro & Leitura Social",
+    "resumo": "Espetáculo teatral de João Luiz do Couto seguido de debate e mediação sobre arte como instrumento de leitura territorial e social.",
+    "sinopse": "Apresentação do espetáculo teatral 'O Elevador Quebrado', de autoria de João Luiz do Couto, realizada dentro da ação 'Formação Cultural e Territorial: Arte como Instrumento de Leitura Social', conduzida pela agente territorial de cultura Juliane Coelho.\n\nA atividade reuniu estudantes e educadores da Escola Estadual São Miguel (Pontal do Araguaia) no auditório do campus da UFMT para assistir à peça e participar de uma mediação reflexiva sobre territorialidade, expressão e cidadania.",
+    "direcao": "Juliane Maciel Coelho (Agente Territorial de Cultura) | Texto: João Luiz do Couto",
+    "elencoFicha": "Apoio: Agentes Territoriais de Cultura, CIRANDA, Instituto Varanda, Pincel, UFMT, Comitê de Cultura de MT, IFG e Governo do Brasil",
+    "duracao": "Ação Realizada (Março/2026)",
+    "classificacao": "Livre",
+    "status": "Evento Realizado",
+    "imagem": "/images/elevador-quebrado.png",
+    "destaqueHome": true,
+    "galeria": [
+      "/images/elevador-quebrado.png"
+    ]
+  },
+  {
+    "id": "ciranda-teatral",
+    "slug": "ciranda-teatral",
+    "titulo": "Ciranda Teatral",
+    "categoria": "Teatro & Formação",
+    "resumo": "Núcleo permanente de criação cênica, pesquisa dramática e montagem de espetáculos comunitários.",
+    "sinopse": "O núcleo Ciranda Teatral promove vivências contínuas de atuação e jogos cênicos para o desenvolvimento artístico e comunitário em Barra do Garças.",
+    "direcao": "Juliane Maciel Coelho (Ju)",
+    "elencoFicha": "Elenco em formação e artistas colaboradores da Associação Cultural Ciranda.",
+    "duracao": "Projeto Permanente",
+    "classificacao": "Livre",
+    "status": "Em andamento",
+    "imagem": "https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?auto=format&fit=crop&w=1200&q=80",
+    "destaqueHome": true,
+    "galeria": [
+      "https://images.unsplash.com/photo-1460723237483-7a6dc9d0b212?auto=format&fit=crop&w=800&q=80"
+    ]
+  }
+]

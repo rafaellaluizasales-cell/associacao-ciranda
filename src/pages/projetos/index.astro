@@ -1,0 +1,36 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+import projetos from '../../data/projetos.json';
+---
+
+<Layout 
+  title="Projetos & Peças Teatrais | Associação Cultural CIRANDA" 
+  description="Conheça o repertório de espetáculos teatrais, peças em circulação e intervenções culturais promovidas pela Ciranda."
+>
+  <section class="bg-ciranda-brown text-white py-16 sm:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full bg-ciranda-amber text-ciranda-brown mb-3">
+        Repertório & Cultura
+      </span>
+      <h1 class="text-4xl sm:text-5xl font-serif font-bold text-white mb-4">
+        Projetos & Peças Teatrais
+      </h1>
+      <p class="text-stone-300 text-base sm:text-lg max-w-2xl mx-auto">
+        Espetáculos, intervenções de rua e iniciativas culturais desenvolvidas pela Associação Ciranda.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-16 sm:py-24 bg-ciranda-cream">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {projetos.map((proj) => (
+          <ProjectCard projeto={proj} />
+        ))}
+      </div>
+
+    </div>
+  </section>
+</Layout>

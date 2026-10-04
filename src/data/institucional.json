@@ -1,0 +1,36 @@
+{
+  "nomeFantasia": "CIRANDA",
+  "razaoSocial": "Associação Cultural Ciranda",
+  "cnpj": "32.599.610/0001-40",
+  "naturezaJuridica": "Associação Privada",
+  "atividadePrincipal": "Organizações associativas ligadas à cultura e à arte (produção teatral, espetáculos, eventos e arte-educação)",
+  "responsavel": "Juliane Maciel Coelho (Ju)",
+  "endereco": {
+    "logradouro": "Rua Frei Felipe, S/N",
+    "complemento": "Quadra 285 Lote 4",
+    "bairro": "Jardim Nova Barra do Garças",
+    "cidade": "Barra do Garças",
+    "uf": "MT",
+    "cep": "78606-448",
+    "completo": "Rua Frei Felipe, S/N — Q. 285 L. 4, Jd. Nova Barra do Garças — Barra do Garças / MT, CEP 78606-448"
+  },
+  "contato": {
+    "whatsappDisplay": "(66) 98434-0745",
+    "whatsappRaw": "5566984340745",
+    "whatsappLink": "https://wa.me/5566984340745?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Associa%C3%A7%C3%A3o%20Ciranda%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.",
+    "email": "associacaoculturalciranda@gmail.com",
+    "emailCNPJ": "ciranda.araguaia@gmail.com"
+  },
+  "dominio": "associacaoculturalciranda.com.br",
+  "urlOficial": "https://www.associacaoculturalciranda.com.br",
+  "redesSociais": {
+    "instagram": "https://instagram.com/associacaoculturalciranda",
+    "facebook": "https://facebook.com/associacaoculturalciranda"
+  },
+  "desenvolvedor": {
+    "nome": "Soluções Digitais — Rafaella Borges",
+    "cargo": "Criação & Estratégia Digital",
+    "avatar": "/images/rafaella-avatar.png",
+    "link": "#"
+  }
+}
