@@ -7,10 +7,52 @@
     "legenda": "Oficinas gratuitas de teatro e artesanato em diversos bairros e polos de Barra do Garças."
   },
   {
-    "id": "gal-elevador-quebrado",
+    "id": "gal-elevador-9682",
     "titulo": "Espetáculo O Elevador Quebrado na UFMT",
     "categoria": "Apresentações",
-    "url": "/images/elevador-quebrado.png",
+    "url": "/images/elevador-quebrado/IMG_9682.jpg",
     "legenda": "Juliane Coelho e estudantes da EE São Miguel no auditório da UFMT em Pontal do Araguaia."
+  },
+  {
+    "id": "gal-elevador-9718",
+    "titulo": "Encenação Teatral O Elevador Quebrado",
+    "categoria": "Apresentações",
+    "url": "/images/elevador-quebrado/IMG_9718.jpg",
+    "legenda": "Cena do espetáculo de autoria de João Luiz do Couto."
+  },
+  {
+    "id": "gal-elevador-9696",
+    "titulo": "Mediação Cultural e Debate com Estudantes",
+    "categoria": "Apresentações",
+    "url": "/images/elevador-quebrado/IMG_9696.jpg",
+    "legenda": "Roda de conversa sobre leitura social e arte no auditório da UFMT."
+  },
+  {
+    "id": "gal-elevador-9766",
+    "titulo": "Expressão Cênica e Atuação",
+    "categoria": "Apresentações",
+    "url": "/images/elevador-quebrado/IMG_9766.jpg",
+    "legenda": "Momento dramático durante a apresentação da peça."
+  },
+  {
+    "id": "gal-elevador-9670",
+    "titulo": "Plateia de Estudantes da EE São Miguel",
+    "categoria": "Apresentações",
+    "url": "/images/elevador-quebrado/IMG_9670.jpg",
+    "legenda": "Estudantes e educadores acompanhando a apresentação."
+  },
+  {
+    "id": "gal-elevador-9744",
+    "titulo": "Formação Territorial & Leitura Social",
+    "categoria": "Apresentações",
+    "url": "/images/elevador-quebrado/IMG_9744.jpg",
+    "legenda": "Ação promovida pela Agente Territorial de Cultura Juliane Coelho."
+  },
+  {
+    "id": "gal-elevador-9673",
+    "titulo": "Foto de Encerramento e Equipe",
+    "categoria": "Apresentações",
+    "url": "/images/elevador-quebrado/IMG_9673.jpg",
+    "legenda": "Registro coletivo com participantes e artistas no campus da UFMT."
   }
 ]

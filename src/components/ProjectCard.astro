@@ -16,22 +16,39 @@ const { projeto } = Astro.props;
 ---
 
 <article class="bg-ciranda-card rounded-2xl overflow-hidden border border-ciranda-border shadow-soft hover:shadow-elevated transition-all duration-300 flex flex-col group hover:-translate-y-1">
-  <div class="relative h-56 overflow-hidden bg-stone-200">
+  
+  <!-- Top Category Bar (Placing tags ABOVE the image so they never overlap the picture) -->
+  <div class="px-5 pt-4 pb-3 flex items-center justify-between gap-2 border-b border-ciranda-border/60 bg-stone-50/80">
+    <span class="badge-tag text-[11px]">
+      {projeto.categoria}
+    </span>
+    <span class="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-stone-800 text-stone-100">
+      {projeto.status}
+    </span>
+  </div>
+
+  <!-- Clean Image Area (Double Click or Click to Expand Image) -->
+  <div 
+    class="relative h-60 overflow-hidden bg-stone-100 cursor-pointer group/img"
+    title="Clique para expandir a imagem"
+    onclick={`if(window.openImageModal){ window.openImageModal('${projeto.imagem}', '${projeto.titulo}'); }`}
+  >
     <img 
       src={projeto.imagem} 
       alt={projeto.titulo} 
-      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+      class="w-full h-full object-cover group-hover/img:scale-105 transition-transform duration-500"
     />
-    <div class="absolute top-3 left-3 flex gap-2">
-      <span class="badge-tag">
-        {projeto.categoria}
+    <div class="absolute inset-0 bg-black/20 opacity-0 group-hover/img:opacity-100 transition-opacity flex items-center justify-center">
+      <span class="bg-stone-900/90 text-white text-xs px-3 py-1.5 rounded-full font-bold shadow-md flex items-center gap-1.5">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+        </svg>
+        Clique para ampliar
       </span>
-    </div>
-    <div class="absolute bottom-3 right-3 bg-stone-950/70 backdrop-blur-sm text-white px-2.5 py-1 rounded-full text-xs font-medium">
-      {projeto.status}
     </div>
   </div>
 
+  <!-- Content Section -->
   <div class="p-6 flex flex-col flex-grow">
     <h3 class="text-xl font-bold font-serif text-ciranda-brown group-hover:text-ciranda-terracotta transition-colors mb-2">
       {projeto.titulo}
@@ -56,4 +73,5 @@ const { projeto } = Astro.props;
       </a>
     </div>
   </div>
+
 </article>

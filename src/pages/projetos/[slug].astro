@@ -69,7 +69,8 @@ const { projeto } = Astro.props;
                   <img 
                     src={imgUrl} 
                     alt={`Foto ${idx + 1} do espetáculo ${projeto.titulo}`} 
-                    class="rounded-2xl h-52 w-full object-cover border border-ciranda-border shadow-soft hover:scale-105 transition duration-300"
+                    class="rounded-2xl h-52 w-full object-cover border border-ciranda-border shadow-soft hover:scale-105 transition duration-300 cursor-pointer"
+                    onclick={`if(window.openImageModal){ window.openImageModal('${imgUrl}', '${projeto.titulo} - Foto ${idx + 1}'); }`}
                   />
                 ))}
               </div>

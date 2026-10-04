@@ -29,10 +29,16 @@
     "duracao": "Ação Realizada (Março/2026)",
     "classificacao": "Livre",
     "status": "Evento Realizado",
-    "imagem": "/images/elevador-quebrado.png",
+    "imagem": "/images/elevador-quebrado/IMG_9682.jpg",
     "destaqueHome": true,
     "galeria": [
-      "/images/elevador-quebrado.png"
+      "/images/elevador-quebrado/IMG_9682.jpg",
+      "/images/elevador-quebrado/IMG_9718.jpg",
+      "/images/elevador-quebrado/IMG_9696.jpg",
+      "/images/elevador-quebrado/IMG_9766.jpg",
+      "/images/elevador-quebrado/IMG_9670.jpg",
+      "/images/elevador-quebrado/IMG_9744.jpg",
+      "/images/elevador-quebrado/IMG_9673.jpg"
     ]
   }
 ]

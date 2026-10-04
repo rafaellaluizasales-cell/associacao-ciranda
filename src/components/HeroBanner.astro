@@ -59,30 +59,31 @@ import institucional from '../data/institucional.json';
 
       </div>
 
-      <!-- Hero Visual Card / Photo Grid -->
+      <!-- Hero Visual Card with IMG_9682.jpg and Non-overlapping Badge -->
       <div class="lg:col-span-5 relative">
-        <div class="relative mx-auto max-w-md lg:max-w-none">
+        <div class="relative mx-auto max-w-md lg:max-w-none space-y-4">
           
           <div class="relative rounded-3xl overflow-hidden shadow-elevated border-4 border-white bg-white">
             <img 
-              src="/images/elevador-quebrado.png" 
+              src="/images/elevador-quebrado/IMG_9682.jpg" 
               alt="Espetáculo O Elevador Quebrado - Associação Cultural Ciranda" 
-              class="w-full h-80 sm:h-96 object-cover hover:scale-105 transition duration-700"
+              class="w-full h-80 sm:h-96 object-cover hover:scale-105 transition duration-700 cursor-pointer"
+              onclick="if(window.openImageModal){ window.openImageModal('/images/elevador-quebrado/IMG_9682.jpg', 'Espetáculo O Elevador Quebrado'); }"
             />
             
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6 text-white">
-              <span class="text-xs font-bold uppercase tracking-wider text-ciranda-amber mb-1">Espetáculo Teatral</span>
-              <h3 class="text-xl font-bold font-serif">O Elevador Quebrado</h3>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent flex flex-col justify-end p-6 text-white">
+              <span class="text-xs font-bold uppercase tracking-wider text-ciranda-amber mb-1">Espetáculo Teatral Real</span>
+              <h3 class="text-2xl font-bold font-serif">O Elevador Quebrado</h3>
               <p class="text-xs text-stone-200 mt-1">Associação Cultural Ciranda • Barra do Garças / MT</p>
             </div>
           </div>
 
-          <!-- Small Floating Badge -->
-          <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-lg border border-ciranda-border flex items-center gap-3 max-w-xs">
+          <!-- Clean Non-Overlapping Badge -->
+          <div class="bg-white p-4 rounded-2xl shadow-soft border border-ciranda-border flex items-center gap-3">
             <img src="/images/logo-ciranda.jpg" alt="Logo Ciranda" class="w-10 h-10 object-contain rounded" />
             <div>
               <p class="text-xs font-bold text-ciranda-brown">Arte para Todos</p>
-              <p class="text-[11px] text-stone-500">Participe dos ensaios e apresentações</p>
+              <p class="text-[11px] text-stone-500">Formação Cultural & Espetáculos Itinerantes</p>
             </div>
           </div>
 
