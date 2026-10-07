@@ -5,9 +5,9 @@
     "titulo": "Projeto Cultura em Movimento",
     "categoria": "Formação & Acessibilidade Cultural",
     "resumo": "Projeto que amplia o acesso à arte e à cultura em Barra do Garças e região por meio de oficinas de artesanato, teatro descentralizado e ações inclusivas.",
-    "sinopse": "O Projeto Cultura em Movimento é uma grande iniciativa de democratização cultural promovida pela Associação Cultural Ciranda em parceria com a FAESPE/UNEMAT e a SECEL/MT.\n\nCom ações descentralizadas em bairros e instituições, o projeto oferece oficinas gratuitas de artesanato (CRAS Construir, Casa da Família, EECMM José Ângelo, Centro Juvenil Dom Bosco, Associação Comunitária Sena Marques/Jd. Mangueiras e CSU em Pontal do Araguaia) e de teatro (APAE Barra do Garças/Aragarças, UFMT, IFMT, Barracão da Vila Maria e ALCARTES).\n\nUm dos grandes destaques inclusivos é o *Teatro em Silêncio*, voltado especialmente ao público surdo, realizado aos sábados no CCVV em parceria com a Curicaca Criativa e a produtora cultural Anne Carmo.",
+    "sinopse": "O Projeto Cultura em Movimento é uma grande iniciativa de democratização cultural promovida pela Associação Cultural Ciranda em parceria com a Secretaria Municipal de Cultura de Barra do Garças - MT, FAESPE/UNEMAT e a SECEL/MT.\n\nCom ações descentralizadas em bairros e instituições, o projeto oferece oficinas gratuitas de artesanato (CRAS Construir, Casa da Família, EECMM José Ângelo, Centro Juvenil Dom Bosco, Associação Comunitária Sena Marques/Jd. Mangueiras e CSU em Pontal do Araguaia) e de teatro (APAE Barra do Garças/Aragarças, UFMT, IFMT, Barracão da Vila Maria e ALCARTES).\n\nUm dos grandes destaques inclusivos é o *Teatro em Silêncio*, voltado especialmente ao público surdo, realizado aos sábados no CCVV em parceria com a Secretaria Municipal de Cultura de Barra do Garças - MT, Curicaca Criativa e a produtora cultural Anne Carmo.",
     "direcao": "Juliane Maciel Coelho (Coordenadora)",
-    "elencoFicha": "Realização: Associação Cultural Ciranda | Parceria: FAESPE / UNEMAT / SECEL-MT | Apoio: Instituto João Velho, ALCARTES, Prefeitura de Barra do Garças",
+    "elencoFicha": "Realização: Associação Cultural Ciranda | Parceria: Secretaria Municipal de Cultura de Barra do Garças - MT / FAESPE / UNEMAT / SECEL-MT | Apoio: Instituto João Velho, ALCARTES, Prefeitura de Barra do Garças",
     "duracao": "Edição Atual (Em andamento)",
     "classificacao": "Livre",
     "status": "Projeto Principal Ativo",
@@ -15,6 +15,59 @@
     "destaqueHome": true,
     "galeria": [
       "/images/cultura-em-movimento.jpg"
+    ]
+  },
+  {
+    "id": "nascida-do-barro",
+    "slug": "nascida-do-barro",
+    "titulo": "Nascida do Barro",
+    "categoria": "Teatro, Escultura & Ancestralidade",
+    "resumo": "Experiência cênica e imersiva que entrelaça artes cênicas, escultura e ancestralidade, concebida no Edital MT Criativo – PNAB (SECEL/MT).",
+    "sinopse": "\"Nascida do Barro\" é uma experiência cênica e imersiva que entrelaça artes cênicas, escultura e ancestralidade, concebida dentro do Edital MT Criativo – PNAB (SECEL/MT). A proposta traz a atriz Juliane Coelho moldando o barro ao vivo em cena, criando formas, rostos e símbolos que resgatam memórias, afetos e a profunda conexão com os antepassados e com os ciclos da existência.\n\nO espaço cênico é construído de maneira viva e orgânica com peças em cerâmica da artesã Sônia Chagas, que atuam tanto como elementos da encenação quanto como exposição artística acessível ao público para contemplação e aquisição. O projeto estabelece um diálogo sensível entre corpo, matéria e tempo, unindo a força do teatro à tradição artesanal do barro em uma vivência rica em texturas e significados.\n\nCom apresentações voltadas à comunidade de Barra do Garças no Centro Cultural Valdon Varjão e no Instituto Varanda, o espetáculo alia arte popular e sustentabilidade, integrando medidas de acessibilidade física, comunicacional e sensorial para acolher a diversidade de públicos.",
+    "direcao": "Juliane Maciel Coelho (Atriz Performática e Produção Executiva) | Texto, Dramaturgia e Produção: João Luiz do Couto",
+    "elencoFicha": "Artesã Ceramista / Cenografia: Sônia Aparecida das Chagas | Preparação Corporal: Yandra Firmo | Direção de Movimento: Thales Ferreira | Comunicação: Rafaella Borges | Assessoria de Imprensa: Cléa Torres | Apoio: Bruna Carvalho | Intérprete de Libras / Acessibilidade: Katiane de Almeida Mello | Apoio / Parcerias: Governo de Mato Grosso, SECEL/MT (Edital MT Criativo – PNAB), Secretaria Municipal de Cultura de Barra do Garças (Centro Cultural Valdon Varjão), Instituto Varanda, Sônia Chagas – Arte em Barro, Oceano Produções, Pinrolê Produções, Universidade Federal de Mato Grosso (UFMT), Centro Coreográfico, Funarte",
+    "duracao": "Período de Realização (2025/2026)",
+    "classificacao": "Livre",
+    "status": "Evento Realizado",
+    "imagem": "/images/nascida-do-barro/foto-06.jpg",
+    "destaqueHome": true,
+    "galeria": [
+      "/images/nascida-do-barro/foto-13.jpg",
+      "/images/nascida-do-barro/foto-01.jpg",
+      "/images/nascida-do-barro/foto-05.jpg",
+      "/images/nascida-do-barro/foto-08.jpg",
+      "/images/nascida-do-barro/foto-06.jpg",
+      "/images/nascida-do-barro/foto-02.jpg",
+      "/images/nascida-do-barro/foto-03.jpg",
+      "/images/nascida-do-barro/foto-04.jpg",
+      "/images/nascida-do-barro/foto-07.jpg",
+      "/images/nascida-do-barro/foto-09.jpg",
+      "/images/nascida-do-barro/foto-10.jpg",
+      "/images/nascida-do-barro/foto-11.jpg",
+      "/images/nascida-do-barro/foto-12.jpg"
+    ]
+  },
+  {
+    "id": "tempero-da-vovo",
+    "slug": "tempero-da-vovo",
+    "titulo": "O Tempero da Vovó",
+    "categoria": "Literatura, Música & Contação de Histórias",
+    "resumo": "Apresentação literomusical e contação de histórias baseada no livro 'O Tempero da Vovó', de autoria de João do Couto, realizada na programação da II FLIVEC em Bom Jesus da Lapa (BA).",
+    "sinopse": "Apresentação literomusical e contação de histórias baseada no livro \"O Tempero da Vovó\", de autoria de João do Couto (João Luiz Pereira do Couto), realizada na programação da II FLIVEC – Feira Literária do Território de Identidade Velho Chico. A atividade uniu leitura, música e oralidade para celebrar o afeto, a memória familiar e as tradições populares.\n\nA ação percorreu espaços formativos e comunitários em Bom Jesus da Lapa (BA), incluindo uma apresentação especial no Quilombo Lagoa das Piranhas por meio da FLIVEC Itinerante e momentos abertos no Espaço Cultural da feira, aproximando crianças, jovens e adultos da literatura de forma leve, envolvente e participativa.\n\nIntegrando a iniciativa contemplada pelo Edital de Apoio às Festas, Feiras e Festivais Literários (N.º 01/2024), a intervenção reforçou o livro e a narrativa como instrumentos vivos de resistência cultural, identidade e partilha coletiva.",
+    "direcao": "João Luiz Pereira do Couto (Autor, Músico e Contador de Histórias)",
+    "elencoFicha": "Fotografia e Registros: Uelder Negrão e Daniel Schaves | Realização: Literando com Elas e Grupo Arte de Contar | Parceria: Palma | Apoio Institucional: Prefeitura Municipal de Bom Jesus da Lapa, CODEVASF, Instituto Federal Baiano (IF Baiano), UNEB (Universidade do Estado da Bahia) e Fundação Pedro Calmon | Apoio Cultural / Comunicação: Instituto de Radiodifusão Educativa da Bahia (IRDEB) / TVE Bahia | Fomento e Apoio Financeiro: Secretaria de Cultura, Secretaria de Educação e Governo do Estado da Bahia (Edital N.º 01/2024)",
+    "duracao": "Ação Realizada (Setembro de 2026)",
+    "classificacao": "Livre",
+    "status": "Evento Realizado",
+    "imagem": "/images/tempero-da-vovo/foto-03.jpg",
+    "destaqueHome": true,
+    "galeria": [
+      "/images/tempero-da-vovo/foto-01.jpg",
+      "/images/tempero-da-vovo/foto-02.jpg",
+      "/images/tempero-da-vovo/foto-03.jpg",
+      "/images/tempero-da-vovo/foto-04.jpg",
+      "/images/tempero-da-vovo/foto-05.jpg",
+      "/images/tempero-da-vovo/foto-06.jpg"
     ]
   },
   {

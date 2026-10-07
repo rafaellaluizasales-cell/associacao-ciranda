@@ -20,45 +20,48 @@ const proximosEventos = agenda.filter(a => a.destaqueHome).slice(0, 3);
 
   <!-- Seção Quem Somos / Chamada Institucional -->
   <section class="py-16 sm:py-24 bg-ciranda-cream">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="space-y-8 text-center max-w-4xl mx-auto">
         
-        <div class="lg:col-span-6 space-y-6">
+        <div class="space-y-4">
           <span class="badge-tag">História & Propósito</span>
           <h2 class="text-3xl sm:text-4xl font-serif font-bold text-ciranda-brown leading-tight">
-            Cultivando arte, teatro e afetos na comunidade do Araguaia.
+            Promovendo arte, cultura viva e desenvolvimento humano no Araguaia.
           </h2>
-          <p class="text-stone-700 text-base leading-relaxed">
-            A <strong class="text-ciranda-brown">CIRANDA (Associação Cultural Ciranda)</strong> é um ponto de encontro para artistas, estudantes e moradores de Barra do Garças / MT. Acreditamos no teatro e na cultura popular como ferramentas de transformação social, expressão humana e fortalecimento da identidade regional.
-          </p>
-          <div class="p-6 bg-white rounded-2xl border border-ciranda-border shadow-soft space-y-2">
-            <h4 class="font-serif font-bold text-ciranda-terracotta text-lg">Nossa Missão</h4>
-            <p class="text-sm text-stone-600">
-              Democratizar o acesso às artes cênicas, realizar espetáculos teatrais itinerantes e oferecer oficinas gratuitas de formação artística para todas as idades. [CONTEÚDO Ciranda]
+        </div>
+
+        <p class="text-stone-700 text-base sm:text-lg leading-relaxed text-justify sm:text-center">
+          A <strong class="text-ciranda-brown">Associação Cultural CIRANDA</strong> atua para a promoção do desenvolvimento social, artístico e cultural na região do Araguaia, especialmente nos aspectos que dizem respeito à sua relação com os processos educativos e de desenvolvimento do Ser Humano. Seus objetivos são divulgar e fomentar ações culturais para a construção da identidade regional e dar suporte na organização de ações que visem o desenvolvimento humano de forma integral, por meio de articulações com outras instituições.
+        </p>
+
+        <!-- Selos & Certificações Rápidas -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2 text-left">
+          <div class="p-5 bg-white rounded-2xl border border-ciranda-border shadow-soft space-y-2">
+            <span class="block text-xs font-bold uppercase tracking-wider text-ciranda-terracotta">Ponto de Cultura</span>
+            <p class="text-xs text-stone-600 leading-relaxed">
+              Certificada pelo <strong>Estado de Mato Grosso</strong> e <strong>Governo Federal</strong>, integrando a Política Nacional de Cultura Viva.
             </p>
           </div>
-          <div>
-            <a href="/sobre" class="btn-secondary text-sm">
-              Conhecer a História da Ciranda
-            </a>
+
+          <div class="p-5 bg-white rounded-2xl border border-ciranda-border shadow-soft space-y-2">
+            <span class="block text-xs font-bold uppercase tracking-wider text-ciranda-brown">Utilidade Pública</span>
+            <p class="text-xs text-stone-600 leading-relaxed">
+              Reconhecida pelo <strong>CMDCA de Barra do Garças</strong> e com título de <strong>Utilidade Pública Municipal (2024)</strong>.
+            </p>
+          </div>
+
+          <div class="p-5 bg-white rounded-2xl border border-ciranda-border shadow-soft space-y-2">
+            <span class="block text-xs font-bold uppercase tracking-wider text-amber-700">Conselho de Cultura</span>
+            <p class="text-xs text-stone-600 leading-relaxed">
+              Membro ativa do <strong>Conselho Municipal de Cultura</strong> de Barra do Garças - MT desde sua fundação em 2018.
+            </p>
           </div>
         </div>
 
-        <div class="lg:col-span-6">
-          <div class="relative rounded-3xl overflow-hidden shadow-elevated border-4 border-white">
-            <img 
-              src="/images/dsc07428.jpg" 
-              alt="Vivência e Formação Teatral - Associação Cultural Ciranda" 
-              class="w-full h-96 object-cover cursor-pointer hover:scale-105 transition duration-500"
-              onclick="if(window.openImageModal){ window.openImageModal('/images/dsc07428.jpg', 'Vivência e Formação Teatral - Barra do Garças / MT'); }"
-            />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent flex items-end p-6 text-white pointer-events-none">
-              <div>
-                <p class="text-xs uppercase tracking-wider text-ciranda-amber font-bold">Barra do Garças / MT</p>
-                <p class="text-lg font-serif font-bold">Vivência e Formação Teatral</p>
-              </div>
-            </div>
-          </div>
+        <div class="pt-2">
+          <a href="/sobre" class="btn-secondary text-sm shadow-sm inline-flex items-center gap-2">
+            Conhecer a História Completa da Ciranda →
+          </a>
         </div>
 
       </div>
