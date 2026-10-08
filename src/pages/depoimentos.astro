@@ -6,18 +6,18 @@ import depoimentos from '../data/depoimentos.json';
 
 <Layout 
   title="Depoimentos & Feedback | Associação Cultural CIRANDA" 
-  description="Veja os relatos de alunos, espectadores e artistas que fazem parte da trajetória da Associação Cultural Ciranda."
+  description="Veja os relatos em vídeo e depoimentos de alunos, espectadores e artistas que fazem parte da trajetória da Associação Cultural Ciranda."
 >
   <section class="bg-ciranda-brown text-white py-16 sm:py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <span class="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full bg-ciranda-amber text-ciranda-brown mb-3">
-        Comunidade
+        Vozes da Comunidade
       </span>
       <h1 class="text-4xl sm:text-5xl font-serif font-bold text-white mb-4">
-        Depoimentos & Feedback
+        Depoimentos & Relatos
       </h1>
       <p class="text-stone-300 text-base sm:text-lg max-w-2xl mx-auto">
-        Histórias de vida, relatos de aprendizado e afeto que envolvem a Ciranda.
+        Histórias de vida, vídeos de participantes e relatos de aprendizado que envolvem a Ciranda.
       </p>
     </div>
   </section>
@@ -25,26 +25,76 @@ import depoimentos from '../data/depoimentos.json';
   <section class="py-16 sm:py-24 bg-ciranda-cream">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
       
-      <!-- Existing Testimonials Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {depoimentos.map((dep) => (
-          <div class="bg-white p-8 rounded-3xl border border-ciranda-border shadow-soft flex flex-col justify-between">
-            <p class="text-sm text-stone-700 italic leading-relaxed mb-6">
-              "{dep.texto}"
+      <!-- Video Testimonials Section -->
+      {depoimentos.videos && depoimentos.videos.length > 0 && (
+        <div class="space-y-8">
+          <div class="text-center max-w-2xl mx-auto">
+            <span class="badge-tag mb-2">Relatos em Vídeo</span>
+            <h2 class="text-2xl sm:text-3xl font-serif font-bold text-ciranda-brown">
+              Assista aos Depoimentos em Vídeo
+            </h2>
+            <p class="text-xs sm:text-sm text-stone-600 mt-2">
+              Confira os vídeos de quem vivencia os projetos, oficinas e ações culturais da Associação Ciranda.
             </p>
-            <div class="flex items-center gap-3 pt-4 border-t border-ciranda-border">
-              <img src={dep.avatar} alt={dep.autor} class="w-12 h-12 rounded-full object-cover" />
-              <div>
-                <h4 class="text-base font-bold font-serif text-ciranda-brown">{dep.autor}</h4>
-                <p class="text-xs text-stone-500">{dep.funcao}</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {depoimentos.videos.map((vid) => (
+              <div class="bg-white rounded-3xl overflow-hidden border border-ciranda-border shadow-soft flex flex-col justify-between">
+                <div class="relative bg-black rounded-t-3xl overflow-hidden aspect-video flex items-center justify-center">
+                  <video 
+                    src={vid.url} 
+                    poster={vid.poster}
+                    controls 
+                    preload="metadata" 
+                    class="w-full h-full object-cover"
+                  >
+                    Seu navegador não suporta reprodução de vídeos.
+                  </video>
+                </div>
+                <div class="p-6">
+                  <h3 class="font-serif font-bold text-lg text-ciranda-brown mb-1">
+                    {vid.autor}
+                  </h3>
+                  <p class="text-xs text-stone-500 font-medium">
+                    {vid.funcao}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      <!-- Text Testimonials Grid -->
+      <div class="space-y-8 border-t border-ciranda-border/60 pt-12">
+        <div class="text-center max-w-2xl mx-auto mb-8">
+          <span class="badge-tag mb-2">Mensagens & Depoimentos</span>
+          <h2 class="text-2xl sm:text-3xl font-serif font-bold text-ciranda-brown">
+            Relatos da Comunidade
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {depoimentos.textos.map((dep) => (
+            <div class="bg-white p-8 rounded-3xl border border-ciranda-border shadow-soft flex flex-col justify-between">
+              <p class="text-sm text-stone-700 italic leading-relaxed mb-6">
+                "{dep.texto}"
+              </p>
+              <div class="flex items-center gap-3 pt-4 border-t border-ciranda-border">
+                <img src={dep.avatar} alt={dep.autor} class="w-12 h-12 rounded-full object-cover" />
+                <div>
+                  <h4 class="text-base font-bold font-serif text-ciranda-brown">{dep.autor}</h4>
+                  <p class="text-xs text-stone-500">{dep.funcao}</p>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
 
       <!-- Feedback Form Component -->
-      <div class="max-w-2xl mx-auto">
+      <div class="max-w-2xl mx-auto pt-4">
         <FeedbackForm client:load />
       </div>
 

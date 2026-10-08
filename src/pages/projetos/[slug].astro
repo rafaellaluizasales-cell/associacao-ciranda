@@ -77,6 +77,27 @@ const { projeto } = Astro.props;
             </div>
           )}
 
+          <!-- Video Registros if any -->
+          {projeto.videos && projeto.videos.length > 0 && (
+            <div class="space-y-4 pt-4">
+              <h3 class="text-2xl font-serif font-bold text-ciranda-brown">Registros em Vídeo & Audiovisual</h3>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {projeto.videos.map((vidUrl, idx) => (
+                  <div class="bg-black rounded-2xl overflow-hidden shadow-soft border border-ciranda-border aspect-video flex items-center justify-center">
+                    <video 
+                      src={vidUrl} 
+                      controls 
+                      preload="metadata" 
+                      class="w-full h-full object-cover"
+                    >
+                      Seu navegador não suporta a exibição de vídeos.
+                    </video>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
         </div>
 
         <!-- Sidebar Ficha Técnica & Booking CTA -->

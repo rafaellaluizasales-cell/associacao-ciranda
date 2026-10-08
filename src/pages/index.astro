@@ -160,7 +160,7 @@ const proximosEventos = agenda.filter(a => a.destaqueHome).slice(0, 3);
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {depoimentos.map((dep) => (
+        {depoimentos.textos.map((dep) => (
           <div class="bg-ciranda-card p-6 rounded-2xl border border-ciranda-border shadow-soft flex flex-col justify-between">
             <p class="text-sm text-stone-700 italic leading-relaxed mb-6">
               "{dep.texto}"

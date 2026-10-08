@@ -1,23 +1,41 @@
-[
-  {
-    "id": "dep-01",
-    "autor": "Mariana Santos",
-    "funcao": "Aluna da Oficina de Teatro",
-    "texto": "A Ciranda transformou minha forma de me expressar. As oficinas são acolhedoras, humanas e cheias de sensibilidade artística!",
-    "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80"
-  },
-  {
-    "id": "dep-02",
-    "autor": "Carlos Eduardo",
-    "funcao": "Espectador e Morador de Barra do Garças",
-    "texto": "Ver o teatro forte e vivo na nossa cidade através da Associação Ciranda é um orgulho enorme para toda a comunidade.",
-    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80"
-  },
-  {
-    "id": "dep-03",
-    "autor": "Ana Paula Ribeiro",
-    "funcao": "Educadora Cultural",
-    "texto": "Espaço de resistência, poesia e amor pela arte. A Ciranda é patrimônio afetivo da nossa região!",
-    "avatar": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=200&q=80"
-  }
-]
+{
+  "videos": [
+    {
+      "id": "dep-vid-01",
+      "autor": "Depoimento em Vídeo — Comunidade Ciranda",
+      "funcao": "Relato de Aluno / Espectador",
+      "url": "/videos/depoimentos/depoimento-01.mp4",
+      "poster": "/images/elevador-quebrado/IMG_9682.jpg"
+    },
+    {
+      "id": "dep-vid-02",
+      "autor": "Depoimento em Vídeo — Vivência Artística",
+      "funcao": "Relato de Participante",
+      "url": "/videos/depoimentos/depoimento-02.mp4",
+      "poster": "/images/elevador-quebrado/IMG_9696.jpg"
+    }
+  ],
+  "textos": [
+    {
+      "id": "dep-01",
+      "autor": "Mariana Santos",
+      "funcao": "Aluna da Oficina de Teatro",
+      "texto": "A Ciranda transformou minha forma de me expressar. As oficinas são acolhedoras, humanas e cheias de sensibilidade artística!",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80"
+    },
+    {
+      "id": "dep-02",
+      "autor": "Carlos Eduardo",
+      "funcao": "Espectador e Morador de Barra do Garças",
+      "texto": "Ver o teatro forte e vivo na nossa cidade através da Associação Ciranda é um orgulho enorme para toda a comunidade.",
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80"
+    },
+    {
+      "id": "dep-03",
+      "autor": "Ana Paula Ribeiro",
+      "funcao": "Educadora Cultural",
+      "texto": "Espaço de resistência, poesia e amor pela arte. A Ciranda é patrimônio afetivo da nossa região!",
+      "avatar": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=200&q=80"
+    }
+  ]
+}
