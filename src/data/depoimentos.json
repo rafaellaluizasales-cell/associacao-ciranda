@@ -4,15 +4,13 @@
       "id": "dep-vid-01",
       "autor": "Depoimento em Vídeo — Comunidade Ciranda",
       "funcao": "Relato de Aluno / Espectador",
-      "url": "/videos/depoimentos/depoimento-01.mp4",
-      "poster": "/images/elevador-quebrado/IMG_9682.jpg"
+      "url": "/videos/depoimentos/depoimento-01.mp4"
     },
     {
       "id": "dep-vid-02",
       "autor": "Depoimento em Vídeo — Vivência Artística",
       "funcao": "Relato de Participante",
-      "url": "/videos/depoimentos/depoimento-02.mp4",
-      "poster": "/images/elevador-quebrado/IMG_9696.jpg"
+      "url": "/videos/depoimentos/depoimento-02.mp4"
     }
   ],
   "textos": [
