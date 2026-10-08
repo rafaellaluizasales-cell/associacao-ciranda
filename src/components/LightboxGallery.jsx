@@ -35,19 +35,25 @@ export default function LightboxGallery({ fotos = [] }) {
           <div
             key={foto.id}
             onClick={() => setFotoAtiva(foto)}
-            className="group relative h-64 rounded-2xl overflow-hidden cursor-pointer bg-stone-200 border border-ciranda-border shadow-soft hover:shadow-elevated transition-all duration-300"
+            className="group bg-white rounded-2xl overflow-hidden cursor-pointer border border-ciranda-border shadow-soft hover:shadow-elevated transition-all duration-300 flex flex-col justify-between"
           >
-            <img
-              src={foto.url}
-              alt={foto.titulo}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5 text-white">
-              <span className="text-[10px] font-bold uppercase tracking-wider text-ciranda-amber mb-1">
+            <div className="relative h-64 sm:h-72 w-full bg-stone-900 flex items-center justify-center p-2 overflow-hidden">
+              <img
+                src={foto.url}
+                alt={foto.titulo}
+                className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+              />
+              <span className="absolute top-3 left-3 text-[10px] font-bold uppercase tracking-wider bg-ciranda-terracotta text-white px-2.5 py-1 rounded-full shadow-sm z-10">
                 {foto.categoria}
               </span>
-              <h4 className="text-base font-serif font-bold">{foto.titulo}</h4>
-              <p className="text-xs text-stone-300 mt-1 line-clamp-1">{foto.legenda}</p>
+            </div>
+            <div className="p-4 bg-white border-t border-ciranda-border/40">
+              <h4 className="text-base font-serif font-bold text-ciranda-brown group-hover:text-ciranda-terracotta transition-colors">
+                {foto.titulo}
+              </h4>
+              <p className="text-xs text-stone-600 mt-1 line-clamp-2 leading-relaxed">
+                {foto.legenda}
+              </p>
             </div>
           </div>
         ))}

@@ -29,14 +29,14 @@ const { projeto } = Astro.props;
 
   <!-- Clean Image Area (Double Click or Click to Expand Image) -->
   <div 
-    class="relative h-64 sm:h-72 overflow-hidden bg-stone-100 cursor-pointer group/img"
+    class="relative h-64 sm:h-72 overflow-hidden bg-stone-900 cursor-pointer group/img flex items-center justify-center p-2"
     title="Clique para expandir a imagem"
     onclick={`if(window.openImageModal){ window.openImageModal('${projeto.imagem}', '${projeto.titulo}'); }`}
   >
     <img 
       src={projeto.imagem} 
       alt={projeto.titulo} 
-      class="w-full h-full object-cover object-[center_15%] group-hover/img:scale-105 transition-transform duration-500"
+      class="w-full h-full object-contain group-hover/img:scale-105 transition-transform duration-500"
     />
     <div class="absolute inset-0 bg-black/20 opacity-0 group-hover/img:opacity-100 transition-opacity flex items-center justify-center">
       <span class="bg-stone-900/90 text-white text-xs px-3 py-1.5 rounded-full font-bold shadow-md flex items-center gap-1.5">
