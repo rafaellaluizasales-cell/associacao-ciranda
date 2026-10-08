@@ -12,5 +12,33 @@
     "categoria": "Apresentações",
     "url": "/images/elevador-quebrado/IMG_9696.jpg",
     "legenda": "Roda de conversa e mediação reflexiva com os estudantes no auditório da UFMT."
+  },
+  {
+    "id": "gal-nascida-do-barro",
+    "titulo": "Projeto Nascida do Barro",
+    "categoria": "Projetos & Espetáculos",
+    "url": "/images/galeria/colagem-nascida-do-barro.png",
+    "legenda": "Projeto Nascida do Barro"
+  },
+  {
+    "id": "gal-tempero-da-vovo",
+    "titulo": "O Tempero da Vovó",
+    "categoria": "Projetos & Espetáculos",
+    "url": "/images/galeria/colagem-tempero-da-vovo.png",
+    "legenda": "O Tempero da Vovó"
+  },
+  {
+    "id": "gal-artesanato-cultura-movimento",
+    "titulo": "Oficinas de Artesanato",
+    "categoria": "Oficinas",
+    "url": "/images/galeria/oficinas-artesanato-cultura-em-movimento.jpg",
+    "legenda": "Oficinas de artesanato. Projeto \"Cultura em movimento\""
+  },
+  {
+    "id": "gal-teatro-cultura-movimento",
+    "titulo": "Oficinas de Teatro",
+    "categoria": "Oficinas",
+    "url": "/images/galeria/oficinas-teatro-cultura-em-movimento.jpg",
+    "legenda": "Oficinas de teatro. Projeto \"Cultura em movimento\""
   }
 ]
