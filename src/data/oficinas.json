@@ -1,5 +1,26 @@
 [
   {
+    "id": "santo-de-casa",
+    "titulo": "Santo de Casa Não Faz Milagre – Ou Faz? (Quanto vale seu show?)",
+    "publicoAlvo": "Produtores, agentes e trabalhadores da cultura de Barra do Garças / MT",
+    "instrutor": "Juliane Maciel Coelho (Agente Cultural e Mediadora)",
+    "duracao": "3 encontros",
+    "horario": "28/10 (qua, 19h), 30/10 (sex, 12h) e 31/10 (sáb, 09h às 15h)",
+    "vagas": 20,
+    "investimento": "Gratuito",
+    "status": "Inscrições Abertas",
+    "andamento": "Ação Cultural Estruturada",
+    "localizacao": "Barra do Garças / MT (locais informados aos inscritos)",
+    "imagem": "/images/santo-de-casa.png",
+    "descricao": "Uma vivência prática e reflexiva sobre produção cultural, acolhimento e valorização dos artistas. Por meio de uma analogia pedagógica sobre cuidado, atendimento e estrutura, os participantes refletem sobre como recebemos e valorizamos os artistas locais frente aos convidados externos. Ao final, o grupo constrói coletivamente o guia digital \"Orientações para o Acolhimento e Valorização de Artistas\".",
+    "cronograma": [
+      { "data": "28/10/2026", "horario": "Quarta-feira, 19h", "atividade": "Reunião preparatória com os inscritos" },
+      { "data": "30/10/2026", "horario": "Sexta-feira, 12h", "atividade": "Vivência Prática I" },
+      { "data": "31/10/2026", "horario": "Sábado, 09h às 15h", "atividade": "Vivência Prática II e sistematização final" }
+    ],
+    "requisitos": "Ser produtor(a), agente ou trabalhador(a) da cultura do município. Vagas limitadas (20 participantes)."
+  },
+  {
     "id": "teatro-aberto-publico",
     "titulo": "Turma de Teatro — Aberta ao Público Geral",
     "publicoAlvo": "Público Geral (Jovens e Adultos)",

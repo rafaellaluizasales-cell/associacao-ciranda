@@ -50,13 +50,36 @@ import oficinas from '../data/oficinas.json';
                 {oficina.titulo}
               </h2>
 
+              {oficina.imagem && (
+                <img
+                  src={oficina.imagem}
+                  alt={oficina.titulo}
+                  class="w-full rounded-2xl border border-ciranda-border shadow-soft cursor-pointer hover:opacity-95 transition"
+                  title="Clique para ampliar"
+                  onclick={`if(window.openImageModal){ window.openImageModal('${oficina.imagem}', '${oficina.titulo}'); }`}
+                />
+              )}
+
               <p class="text-stone-700 text-sm leading-relaxed">
                 {oficina.descricao}
               </p>
 
+              {oficina.cronograma && (
+                <div class="bg-ciranda-cream rounded-2xl p-4 border border-ciranda-border space-y-2">
+                  <span class="block text-xs font-bold uppercase tracking-wider text-ciranda-terracotta">Cronograma</span>
+                  {oficina.cronograma.map((etapa) => (
+                    <div class="text-xs text-stone-700">
+                      <strong class="text-ciranda-brown">{etapa.data}</strong> ({etapa.horario}) — {etapa.atividade}
+                    </div>
+                  ))}
+                </div>
+              )}
+
               <div class="space-y-2 pt-2 border-t border-ciranda-border text-xs text-stone-600">
                 <p><strong>Público-alvo:</strong> {oficina.publicoAlvo}</p>
                 <p><strong>Duração / Horário:</strong> {oficina.horario}</p>
+                {oficina.imagem && <p><strong>Vagas:</strong> {oficina.vagas}</p>}
+                {oficina.imagem && <p><strong>Local:</strong> {oficina.localizacao}</p>}
                 <p><strong>Instrutor(a):</strong> {oficina.instrutor}</p>
                 <p><strong>Requisitos:</strong> {oficina.requisitos}</p>
               </div>

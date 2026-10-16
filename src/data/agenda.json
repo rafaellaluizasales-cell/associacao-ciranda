@@ -1,5 +1,20 @@
 [
   {
+    "id": "evt-santo-de-casa",
+    "titulo": "Santo de Casa Não Faz Milagre – Ou Faz?",
+    "tipo": "Ação Cultural Estruturada",
+    "data": "2026-10-28",
+    "dataExibicao": "28, 30 e 31 de Outubro",
+    "horario": "Início 28/10 às 19h",
+    "local": "Barra do Garças / MT (locais informados aos inscritos)",
+    "entrada": "Gratuito • Vagas Limitadas",
+    "descricao": "Vivência prática e reflexiva sobre produção cultural, acolhimento e valorização dos artistas, voltada a 20 produtores, agentes e trabalhadores da cultura. Cronograma: 28/10 (qua, 19h) reunião preparatória • 30/10 (sex, 12h) Vivência Prática I • 31/10 (sáb, 09h às 15h) Vivência Prática II e sistematização final.",
+    "status": "Inscrições Abertas",
+    "imagem": "/images/santo-de-casa.png",
+    "linkInscricao": "/oficinas#inscricao",
+    "destaqueHome": true
+  },
+  {
     "id": "evt-cultura-movimento",
     "titulo": "Oficina de Teatro — Turma Aberta ao Público",
     "tipo": "Projeto Cultura em Movimento",
