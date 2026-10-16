@@ -60,9 +60,11 @@ import oficinas from '../data/oficinas.json';
                 />
               )}
 
-              <p class="text-stone-700 text-sm leading-relaxed">
-                {oficina.descricao}
-              </p>
+              {oficina.descricao && (
+                <p class="text-stone-700 text-sm leading-relaxed">
+                  {oficina.descricao}
+                </p>
+              )}
 
               {oficina.cronograma && (
                 <div class="bg-ciranda-cream rounded-2xl p-4 border border-ciranda-border space-y-2">

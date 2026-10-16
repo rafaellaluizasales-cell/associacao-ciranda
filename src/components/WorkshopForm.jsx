@@ -5,6 +5,7 @@ export default function WorkshopForm({ oficinas = [] }) {
     nome: '',
     idade: '',
     oficinaId: oficinas[0]?.id || '',
+    areaAtuacao: '',
     telefone: '',
     email: '',
     observacoes: ''
@@ -16,10 +17,15 @@ export default function WorkshopForm({ oficinas = [] }) {
     const oficinaSelecionada = oficinas.find(o => o.id === formData.oficinaId) || oficinas[0];
     
     // Construct pre-filled WhatsApp message
+    const areaLinha = formData.oficinaId === 'santo-de-casa' && formData.areaAtuacao
+      ? `*Área de atuação na cultura:* ${formData.areaAtuacao}\n`
+      : '';
+
     const msg = `*Nova Inscrição em Oficina - Site Ciranda*\n\n` +
       `*Nome:* ${formData.nome}\n` +
       `*Idade:* ${formData.idade} anos\n` +
       `*Oficina:* ${oficinaSelecionada?.titulo || 'Oficina'}\n` +
+      areaLinha +
       `*Telefone/WhatsApp:* ${formData.telefone}\n` +
       `*E-mail:* ${formData.email || 'Não informado'}\n` +
       `*Observações:* ${formData.observacoes || 'Nenhuma'}`;
@@ -130,6 +136,22 @@ export default function WorkshopForm({ oficinas = [] }) {
               </select>
             </div>
           </div>
+
+          {formData.oficinaId === 'santo-de-casa' && (
+            <div>
+              <label className="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-1">
+                Área de Atuação na Cultura *
+              </label>
+              <input
+                type="text"
+                required
+                placeholder="Ex: Produção cultural, música, teatro, artesanato, audiovisual..."
+                value={formData.areaAtuacao}
+                onChange={(e) => setFormData({ ...formData, areaAtuacao: e.target.value })}
+                className="w-full px-4 py-3 rounded-xl border border-stone-300 focus:border-ciranda-terracotta focus:ring-2 focus:ring-ciranda-terracotta/20 outline-none transition text-sm"
+              />
+            </div>
+          )}
 
           <div>
             <label className="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-1">
