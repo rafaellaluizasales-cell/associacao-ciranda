@@ -7,8 +7,13 @@
     "dataExibicao": "28, 30 e 31 de Outubro",
     "horario": "Início 28/10 às 19h",
     "local": "Barra do Garças / MT (locais informados aos inscritos)",
-    "entrada": "Gratuito • Vagas Limitadas",
-    "descricao": "Vivência prática e reflexiva sobre produção cultural, acolhimento e valorização dos artistas, voltada a 20 produtores, agentes e trabalhadores da cultura. Cronograma: 28/10 (qua, 19h) reunião preparatória • 30/10 (sex, 12h) Vivência Prática I • 31/10 (sáb, 09h às 15h) Vivência Prática II e sistematização final.",
+    "entrada": "Gratuito • 20 Vagas",
+    "descricao": "Vivência prática e reflexiva sobre produção cultural, acolhimento e valorização profissional dos artistas locais, voltada a produtores, agentes e trabalhadores da cultura.",
+    "cronograma": [
+      { "data": "28/10 (Qua, 19h)", "atividade": "Reunião preparatória com os inscritos" },
+      { "data": "30/10 (Sex, 12h)", "atividade": "Vivência Prática I" },
+      { "data": "31/10 (Sáb, 09h às 15h)", "atividade": "Vivência Prática II e sistematização final" }
+    ],
     "status": "Inscrições Abertas",
     "imagem": "/images/santo-de-casa.png",
     "linkInscricao": "/oficinas#inscricao",
