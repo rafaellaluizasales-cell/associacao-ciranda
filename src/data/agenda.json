@@ -6,12 +6,12 @@
     "data": "2026-10-28",
     "dataExibicao": "28, 30 e 31 de Outubro",
     "horario": "Início 28/10 às 19h",
-    "local": "Barra do Garças / MT (locais informados aos inscritos)",
+    "local": "Centro Cultural Valdon Varjão (28/10) e espaços de vivência",
     "entrada": "Gratuito • 20 Vagas",
-    "descricao": "Vivência prática e reflexiva sobre produção cultural, acolhimento e valorização profissional dos artistas locais, voltada a produtores, agentes e trabalhadores da cultura.",
+    "descricao": "Vivência prática e reflexiva sobre produção cultural, acolhimento e valorização profissional dos artistas. Aberto a artistas, produtores, agentes da cultura e público em geral interessado.",
     "cronograma": [
-      { "data": "28/10 (Qua, 19h)", "atividade": "Reunião preparatória com os inscritos" },
-      { "data": "30/10 (Sex, 12h)", "atividade": "Vivência Prática I" },
+      { "data": "28/10 (Qua, 19h)", "atividade": "Reunião preparatória com os inscritos — no Centro Cultural Valdon Varjão" },
+      { "data": "30/10 (Sex, 12h às 13h30)", "atividade": "Vivência Prática I" },
       { "data": "31/10 (Sáb, 09h às 15h)", "atividade": "Vivência Prática II e sistematização final" }
     ],
     "status": "Inscrições Abertas",
