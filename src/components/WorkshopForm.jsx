@@ -32,6 +32,30 @@ export default function WorkshopForm({ oficinas = [] }) {
 
     const waUrl = `https://wa.me/5566984340745?text=${encodeURIComponent(msg)}`;
 
+    // Envio automático de segurança para o e-mail da Associação Ciranda em segundo plano
+    try {
+      fetch('https://formsubmit.co/ajax/associacaoculturalciranda@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          _subject: `Nova Inscrição: ${oficinaSelecionada?.titulo || 'Oficina'} - ${formData.nome}`,
+          _template: 'table',
+          _captcha: 'false',
+          Nome: formData.nome,
+          Idade: `${formData.idade} anos`,
+          Oficina: oficinaSelecionada?.titulo || 'Oficina',
+          ...(formData.oficinaId === 'santo-de-casa' ? { 'Área de Atuação na Cultura': formData.areaAtuacao } : {}),
+          'Telefone / WhatsApp': formData.telefone,
+          'E-mail': formData.email || 'Não informado',
+          Observacoes: formData.observacoes || 'Nenhuma',
+          'Data/Hora': new Date().toLocaleString('pt-BR')
+        })
+      }).catch(() => {});
+    } catch (_) {}
+
     setEnviado(true);
     
     // Open WhatsApp after brief state feedback

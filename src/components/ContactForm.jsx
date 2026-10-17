@@ -22,6 +22,27 @@ export default function ContactForm() {
 
     const waUrl = `https://wa.me/5566984340745?text=${encodeURIComponent(msg)}`;
 
+    try {
+      fetch('https://formsubmit.co/ajax/associacaoculturalciranda@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          _subject: `Contato pelo Site: ${formData.assunto} - ${formData.nome}`,
+          _template: 'table',
+          _captcha: 'false',
+          Nome: formData.nome,
+          'E-mail': formData.email,
+          Telefone: formData.telefone || 'Não informado',
+          Assunto: formData.assunto,
+          Mensagem: formData.mensagem,
+          'Data/Hora': new Date().toLocaleString('pt-BR')
+        })
+      }).catch(() => {});
+    } catch (_) {}
+
     setEnviado(true);
     setTimeout(() => {
       window.open(waUrl, '_blank');
