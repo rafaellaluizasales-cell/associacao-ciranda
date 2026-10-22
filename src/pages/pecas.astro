@@ -1,0 +1,39 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import projetos from '../data/projetos.json';
+
+// Na aba Peças: Nascida do Barro, O Tempero da Vovó, O Elevador Quebrado
+const pecasTeatrais = projetos.filter(p => p.slug !== 'cultura-em-movimento');
+---
+
+<Layout 
+  title="Peças Teatrais | Associação Cultural CIRANDA" 
+  description="Conheça o repertório de espetáculos teatrais, peças e contações de histórias encenadas pela Associação Cultural Ciranda."
+>
+  <section class="bg-ciranda-brown text-white py-16 sm:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full bg-ciranda-amber text-ciranda-brown mb-3">
+        Repertório Cênico
+      </span>
+      <h1 class="text-4xl sm:text-5xl font-serif font-bold text-white mb-4">
+        Peças Teatrais
+      </h1>
+      <p class="text-stone-300 text-base sm:text-lg max-w-2xl mx-auto">
+        Espetáculos, intervenções poéticas e contações de histórias que circulam pelo Araguaia e por todo o Brasil.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-16 sm:py-24 bg-ciranda-cream">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {pecasTeatrais.map((peca) => (
+          <ProjectCard projeto={peca} />
+        ))}
+      </div>
+
+    </div>
+  </section>
+</Layout>

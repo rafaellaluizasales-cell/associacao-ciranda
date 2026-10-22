@@ -27,8 +27,8 @@ const { projeto } = Astro.props;
 
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-4">
       <div class="flex flex-wrap items-center gap-3">
-        <a href="/projetos" class="text-xs text-stone-300 hover:text-ciranda-amber flex items-center gap-1">
-          ← Voltar para Projetos
+        <a href={projeto.slug === 'cultura-em-movimento' ? '/projetos' : '/pecas'} class="text-xs text-stone-300 hover:text-ciranda-amber flex items-center gap-1">
+          ← Voltar para {projeto.slug === 'cultura-em-movimento' ? 'Projetos' : 'Peças'}
         </a>
         <span class="badge-tag">{projeto.categoria}</span>
         <span class="text-xs px-2.5 py-0.5 rounded-full bg-stone-800 text-stone-200">{projeto.status}</span>
