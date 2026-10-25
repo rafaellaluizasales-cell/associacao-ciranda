@@ -86,7 +86,7 @@ export default function TransparenciaSection() {
                     RESUMO
                   </h3>
                 </div>
-                <p className="text-stone-700 text-sm sm:text-[15px] leading-relaxed text-justify sm:text-left whitespace-pre-line">
+                <p className="text-stone-700 text-sm sm:text-[15px] leading-relaxed text-justify whitespace-pre-line">
                   {projetoAtivo.resumo}
                 </p>
               </div>
