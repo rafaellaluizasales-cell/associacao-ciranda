@@ -12,6 +12,7 @@ const navLinks = [
   { name: 'Oficinas', path: '/oficinas' },
   { name: 'Galeria', path: '/galeria' },
   { name: 'Transparência', path: '/transparencia' },
+  { name: 'Notícias', path: '/noticias' },
   { name: 'Depoimentos', path: '/depoimentos' },
   { name: 'Contato', path: '/contato' },
 ];
@@ -35,13 +36,13 @@ const navLinks = [
       </a>
 
       <!-- Desktop Navigation -->
-      <nav class="hidden lg:flex items-center gap-1 xl:gap-2">
+      <nav class="hidden lg:flex items-center gap-0.5 xl:gap-1.5">
         {navLinks.map((link) => {
           const isActive = currentPath === link.path || (link.path !== '/' && currentPath.startsWith(link.path));
           return (
             <a
               href={link.path}
-              class={`px-3.5 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+              class={`px-2.5 xl:px-3.5 py-1.5 xl:py-2 rounded-full text-xs xl:text-sm font-medium transition-all duration-200 ${
                 isActive
                   ? 'bg-ciranda-terracotta text-white font-semibold shadow-sm'
                   : 'text-ciranda-dark hover:text-ciranda-terracotta hover:bg-ciranda-amber/10'

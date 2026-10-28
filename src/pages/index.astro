@@ -3,14 +3,17 @@ import Layout from '../layouts/Layout.astro';
 import HeroBanner from '../components/HeroBanner.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 import EventCard from '../components/EventCard.astro';
+import NewsCard from '../components/NewsCard.astro';
 import institucional from '../data/institucional.json';
 import projetos from '../data/projetos.json';
 import agenda from '../data/agenda.json';
 import oficinas from '../data/oficinas.json';
 import depoimentos from '../data/depoimentos.json';
+import noticias from '../data/noticias.json';
 
 const projetosDestaque = projetos.filter(p => p.destaqueHome).slice(0, 3);
 const proximosEventos = agenda.filter(a => a.destaqueHome).slice(0, 3);
+const noticiasDestaque = noticias.filter(n => n.destaqueHome).slice(0, 3);
 ---
 
 <Layout title="Início | Associação Cultural CIRANDA">
@@ -125,6 +128,39 @@ const proximosEventos = agenda.filter(a => a.destaqueHome).slice(0, 3);
         <a href="/agenda" class="btn-primary text-sm shadow">
           Ver Calendário Completo da Agenda
         </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Seção Notícias & Na Mídia -->
+  <section class="py-16 sm:py-24 bg-white border-t border-ciranda-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12">
+        <div>
+          <span class="badge-tag mb-2">Ciranda na Mídia</span>
+          <h2 class="text-3xl sm:text-4xl font-serif font-bold text-ciranda-brown">
+            Notícias & Destaques
+          </h2>
+          <p class="text-stone-600 text-sm mt-2">
+            Acompanhe a repercussão das nossas ações, parcerias públicas e projetos em destaque na imprensa.
+          </p>
+        </div>
+        <div>
+          <a href="/noticias" class="inline-flex items-center gap-1.5 text-sm font-bold text-ciranda-terracotta hover:underline">
+            Ver Todas as Notícias
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {noticiasDestaque.map((item) => (
+          <NewsCard noticia={item} />
+        ))}
       </div>
 
     </div>
