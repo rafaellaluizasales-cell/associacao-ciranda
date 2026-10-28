@@ -23,26 +23,26 @@ const navLinks = [
     <div class="flex items-center justify-between h-20 sm:h-24">
       
       <!-- Brand Logo -->
-      <a href="/" class="flex items-center gap-3 group py-2">
+      <a href="/" class="flex items-center gap-3 shrink-0 group py-2">
         <img 
           src="/images/logo-ciranda.jpg" 
           alt="Logo Associação Cultural Ciranda" 
           class="h-12 sm:h-16 w-auto object-contain rounded-lg shadow-sm transition-transform duration-300 group-hover:scale-105"
         />
-        <div class="hidden sm:block">
+        <div class="hidden sm:block lg:hidden 2xl:block whitespace-nowrap">
           <span class="block text-xs font-semibold uppercase tracking-widest text-ciranda-terracotta">Associação Cultural</span>
           <span class="block text-xl font-bold font-serif text-ciranda-brown leading-tight">CIRANDA</span>
         </div>
       </a>
 
       <!-- Desktop Navigation -->
-      <nav class="hidden lg:flex items-center gap-0.5 xl:gap-1.5">
+      <nav class="hidden lg:flex items-center gap-1 xl:gap-1.5 2xl:gap-2 shrink-0 ml-auto">
         {navLinks.map((link) => {
           const isActive = currentPath === link.path || (link.path !== '/' && currentPath.startsWith(link.path));
           return (
             <a
               href={link.path}
-              class={`px-2.5 xl:px-3.5 py-1.5 xl:py-2 rounded-full text-xs xl:text-sm font-medium transition-all duration-200 ${
+              class={`px-2 xl:px-2.5 2xl:px-3 py-1.5 xl:py-2 rounded-full text-xs xl:text-[13px] 2xl:text-sm font-medium whitespace-nowrap transition-all duration-200 ${
                 isActive
                   ? 'bg-ciranda-terracotta text-white font-semibold shadow-sm'
                   : 'text-ciranda-dark hover:text-ciranda-terracotta hover:bg-ciranda-amber/10'
@@ -55,13 +55,13 @@ const navLinks = [
       </nav>
 
       <!-- Mobile Menu Button -->
-      <div class="flex items-center gap-3">
+      <div class="flex items-center gap-3 lg:hidden">
         <!-- Mobile Menu Toggle Button -->
         <button
           id="mobile-menu-toggle"
           type="button"
           aria-label="Abrir Menu de Navegação"
-          class="lg:hidden p-2.5 rounded-xl text-ciranda-brown hover:bg-ciranda-amber/15 focus:outline-none"
+          class="p-2.5 rounded-xl text-ciranda-brown hover:bg-ciranda-amber/15 focus:outline-none"
         >
           <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
