@@ -130,9 +130,39 @@ const { noticia } = Astro.props;
         ))}
       </div>
 
-      <!-- Destaque Especial: Acesso aos Editais da Lei Aldir Blanc -->
+      <!-- Institutional Source & Verification Box (1º - Publicação Oficial) -->
+      <div class="mt-12 p-6 sm:p-8 rounded-3xl bg-ciranda-cream border-2 border-ciranda-border shadow-soft space-y-4">
+        <div class="flex items-start gap-4">
+          <div class="w-12 h-12 rounded-2xl bg-ciranda-amber/20 text-ciranda-brown flex items-center justify-center shrink-0">
+            <svg class="w-6 h-6 text-ciranda-terracotta" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+            </svg>
+          </div>
+          <div class="space-y-1">
+            <h3 class="text-lg font-bold font-serif text-ciranda-brown">
+              Publicação Oficial no Portal Governamental
+            </h3>
+            <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">
+              Esta matéria foi publicada pelos canais de comunicação da <strong>Prefeitura Municipal de Rondonópolis - MT</strong>, ressaltando o Termo de Colaboração com a <strong>Associação Cultural Ciranda</strong> para o Ciclo II da Política Nacional Aldir Blanc (PNAB).
+            </p>
+          </div>
+        </div>
+
+        <div class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center justify-end gap-3">
+          <a 
+            href={noticia.fonteUrl} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="btn-secondary text-xs sm:text-sm uppercase tracking-wider inline-flex items-center justify-center gap-2"
+          >
+            Acessar Notícia no Portal da Prefeitura ↗
+          </a>
+        </div>
+      </div>
+
+      <!-- Destaque Especial: Acesso aos Editais da Lei Aldir Blanc (2º - Inscrições & Editais) -->
       {noticia.editaisUrl && (
-        <section aria-label="Acesso aos Editais" class="my-10 p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-amber-50/90 via-ciranda-card to-orange-50/60 border-2 border-ciranda-amber/70 shadow-soft hover:shadow-elevated transition-all duration-300 relative overflow-hidden">
+        <section aria-label="Acesso aos Editais" class="mt-6 mb-12 p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-amber-50/90 via-ciranda-card to-orange-50/60 border-2 border-ciranda-amber/70 shadow-soft hover:shadow-elevated transition-all duration-300 relative overflow-hidden">
           {/* Subtle background decorative circle */}
           <div class="absolute -right-12 -bottom-12 w-48 h-48 bg-ciranda-amber/15 rounded-full blur-2xl pointer-events-none"></div>
 
@@ -170,46 +200,6 @@ const { noticia } = Astro.props;
           </div>
         </section>
       )}
-
-      <!-- Institutional Source & Verification Box -->
-      <div class="mt-12 p-6 sm:p-8 rounded-3xl bg-ciranda-cream border-2 border-ciranda-border shadow-soft space-y-4">
-        <div class="flex items-start gap-4">
-          <div class="w-12 h-12 rounded-2xl bg-ciranda-amber/20 text-ciranda-brown flex items-center justify-center shrink-0">
-            <svg class="w-6 h-6 text-ciranda-terracotta" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
-            </svg>
-          </div>
-          <div class="space-y-1">
-            <h3 class="text-lg font-bold font-serif text-ciranda-brown">
-              Publicação Oficial no Portal Governamental
-            </h3>
-            <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">
-              Esta matéria foi publicada pelos canais de comunicação da <strong>Prefeitura Municipal de Rondonópolis - MT</strong>, ressaltando o Termo de Colaboração com a <strong>Associação Cultural Ciranda</strong> para o Ciclo II da Política Nacional Aldir Blanc (PNAB).
-            </p>
-          </div>
-        </div>
-
-        <div class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center justify-end gap-3">
-          {noticia.editaisUrl && (
-            <a 
-              href={noticia.editaisUrl} 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              class="btn-primary text-xs sm:text-sm uppercase tracking-wider inline-flex items-center justify-center gap-2"
-            >
-              Consultar Editais do Ciclo II ↗
-            </a>
-          )}
-          <a 
-            href={noticia.fonteUrl} 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            class="btn-secondary text-xs sm:text-sm uppercase tracking-wider inline-flex items-center justify-center gap-2"
-          >
-            Acessar Notícia no Portal da Prefeitura ↗
-          </a>
-        </div>
-      </div>
 
       <!-- Bottom Navigation Back Button -->
       <div class="pt-8 border-t border-stone-200 flex items-center justify-between">
