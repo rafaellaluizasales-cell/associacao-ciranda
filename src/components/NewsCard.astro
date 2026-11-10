@@ -9,6 +9,7 @@ interface Props {
     categoria: string;
     fonte: string;
     fonteUrl: string;
+    editaisUrl?: string;
     imagem: string;
     resumo: string;
   };
@@ -74,15 +75,31 @@ const { noticia } = Astro.props;
     </p>
 
     <div class="pt-4 border-t border-ciranda-border flex items-center justify-between mt-auto">
-      <a 
-        href={noticia.fonteUrl} 
-        target="_blank" 
-        rel="noopener noreferrer" 
-        class="inline-flex items-center gap-1 text-[11px] font-semibold text-stone-500 hover:text-ciranda-terracotta transition"
-        title="Ver matéria original"
-      >
-        <span>Portal Oficial ↗</span>
-      </a>
+      <div class="flex items-center gap-2">
+        <a 
+          href={noticia.fonteUrl} 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="inline-flex items-center gap-1 text-[11px] font-semibold text-stone-500 hover:text-ciranda-terracotta transition"
+          title="Ver matéria original"
+        >
+          <span>Portal Oficial ↗</span>
+        </a>
+        {noticia.editaisUrl && (
+          <span class="inline-flex items-center gap-1.5">
+            <span class="text-stone-300">•</span>
+            <a 
+              href={noticia.editaisUrl} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="inline-flex items-center gap-1 text-[11px] font-bold text-ciranda-terracotta hover:underline transition"
+              title="Acessar Editais da PNAB"
+            >
+              <span>Editais ↗</span>
+            </a>
+          </span>
+        )}
+      </div>
 
       <a 
         href={`/noticias/${noticia.slug}`} 
