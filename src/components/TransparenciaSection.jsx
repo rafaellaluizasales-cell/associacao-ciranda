@@ -214,15 +214,15 @@ export default function TransparenciaSection() {
                     key={idx}
                     onClick={() => {
                       if (typeof window !== 'undefined' && window.openImageModal) {
-                        window.openImageModal(img.url, img.titulo || projetoAtivo.titulo);
+                        window.openImageModal(img.url, projetoAtivo.titulo);
                       }
                     }}
-                    className="group bg-white rounded-2xl overflow-hidden border border-ciranda-border shadow-soft hover:shadow-elevated transition-all duration-300 cursor-pointer flex flex-col justify-between hover:-translate-y-1"
+                    className="group bg-white rounded-2xl overflow-hidden border border-ciranda-border shadow-soft hover:shadow-elevated transition-all duration-300 cursor-pointer hover:-translate-y-1"
                   >
                     <div className="relative aspect-[16/10] w-full bg-stone-900 overflow-hidden flex items-center justify-center">
                       <img
                         src={img.url}
-                        alt={img.titulo || `Registro ${idx + 1}`}
+                        alt={`Registro ${idx + 1} - ${projetoAtivo.titulo}`}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         loading="lazy"
                       />
@@ -235,13 +235,6 @@ export default function TransparenciaSection() {
                         </span>
                       </div>
                     </div>
-                    {img.titulo && (
-                      <div className="p-3.5 bg-white border-t border-stone-100 flex-grow flex items-center">
-                        <p className="text-xs sm:text-[13px] text-stone-700 font-medium leading-snug line-clamp-2">
-                          {img.titulo}
-                        </p>
-                      </div>
-                    )}
                   </div>
                 ))}
               </div>
