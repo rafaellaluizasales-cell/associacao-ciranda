@@ -189,6 +189,66 @@ export default function TransparenciaSection() {
             </div>
 
           </div>
+
+          {/* Seção de Registros Fotográficos da Execução */}
+          {projetoAtivo.imagens && projetoAtivo.imagens.length > 0 && (
+            <div className="pt-8 sm:pt-12 border-t border-stone-200 space-y-6">
+              <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+                <div>
+                  <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full bg-ciranda-amber/20 text-[#A6431E] border border-ciranda-amber/40 mb-2">
+                    Evidências Visuais da Execução
+                  </span>
+                  <h3 className="text-2xl sm:text-3xl font-serif font-black text-[#A6431E] uppercase tracking-wide">
+                    Registros Fotográficos do Projeto
+                  </h3>
+                </div>
+                <p className="text-stone-500 text-xs sm:text-sm">
+                  Clique em qualquer imagem para ampliar
+                </p>
+              </div>
+
+              {/* Grid das 5 Fotos */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                {projetoAtivo.imagens.map((img, idx) => (
+                  <div
+                    key={idx}
+                    onClick={() => {
+                      if (typeof window !== 'undefined' && window.openImageModal) {
+                        window.openImageModal(img.url, img.titulo || projetoAtivo.titulo);
+                      }
+                    }}
+                    className={`group bg-white rounded-2xl overflow-hidden border border-ciranda-border shadow-soft hover:shadow-elevated transition-all duration-300 cursor-pointer flex flex-col justify-between ${
+                      idx === 0 ? 'sm:col-span-2 lg:col-span-2' : ''
+                    }`}
+                  >
+                    <div className="relative h-64 sm:h-72 w-full bg-stone-900 overflow-hidden">
+                      <img
+                        src={img.url}
+                        alt={img.titulo || `Registro ${idx + 1}`}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-black/25 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span className="bg-stone-950/85 text-white text-xs px-3.5 py-2 rounded-full font-bold shadow-lg flex items-center gap-1.5">
+                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                          </svg>
+                          Clique para ampliar
+                        </span>
+                      </div>
+                    </div>
+                    {img.titulo && (
+                      <div className="p-3.5 bg-white border-t border-stone-100">
+                        <p className="text-xs text-stone-600 font-medium line-clamp-1">
+                          {img.titulo}
+                        </p>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       ) : (
         /* Visualização Inicial (Lista de Projetos - Modelo Mutirum) */
