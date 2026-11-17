@@ -123,14 +123,27 @@ const { noticia } = Astro.props;
 
       <!-- Article Body Paragraphs -->
       <div class="space-y-5 text-stone-800 text-base sm:text-lg leading-relaxed text-justify pt-2">
-        {noticia.paragrafos.map((p: string) => (
-          <p class="leading-relaxed">
-            {p}
-          </p>
-        ))}
+        {noticia.paragrafos.map((p: string, idx: number) => {
+          const isContextIntro = idx === 0 && noticia.slug !== 'rondonopolis-politica-aldir-blanc';
+          return (
+            <div class={isContextIntro ? "p-5 sm:p-6 rounded-2xl bg-amber-50/80 border-l-4 border-ciranda-amber text-stone-800 shadow-sm space-y-2 my-2" : ""}>
+              {isContextIntro && (
+                <div class="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#A6431E]">
+                  <svg class="w-4 h-4 text-ciranda-amber" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span>Contexto Institucional • Carrossel da Leitura</span>
+                </div>
+              )}
+              <p class="leading-relaxed">
+                {p}
+              </p>
+            </div>
+          );
+        })}
       </div>
 
-      <!-- Institutional Source & Verification Box (1º - Publicação Oficial) -->
+      <!-- Institutional Source & Verification Box (1º - Publicação Oficial / Fonte) -->
       <div class="mt-12 p-6 sm:p-8 rounded-3xl bg-ciranda-cream border-2 border-ciranda-border shadow-soft space-y-4">
         <div class="flex items-start gap-4">
           <div class="w-12 h-12 rounded-2xl bg-ciranda-amber/20 text-ciranda-brown flex items-center justify-center shrink-0">
@@ -140,10 +153,10 @@ const { noticia } = Astro.props;
           </div>
           <div class="space-y-1">
             <h3 class="text-lg font-bold font-serif text-ciranda-brown">
-              Publicação Oficial no Portal Governamental
+              Publicação Oficial / Fonte da Matéria
             </h3>
             <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">
-              Esta matéria foi publicada pelos canais de comunicação da <strong>Prefeitura Municipal de Rondonópolis - MT</strong>, ressaltando o Termo de Colaboração com a <strong>Associação Cultural Ciranda</strong> para o Ciclo II da Política Nacional Aldir Blanc (PNAB).
+              {noticia.textoFonte || `Esta matéria foi publicada por ${noticia.fonte}, destacando ações, parcerias e projetos culturais da Associação Cultural Ciranda.`}
             </p>
           </div>
         </div>
@@ -155,7 +168,7 @@ const { noticia } = Astro.props;
             rel="noopener noreferrer" 
             class="btn-secondary text-xs sm:text-sm uppercase tracking-wider inline-flex items-center justify-center gap-2"
           >
-            Acessar Notícia no Portal da Prefeitura ↗
+            Acessar Matéria no Portal Original ({noticia.fonte}) ↗
           </a>
         </div>
       </div>
