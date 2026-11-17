@@ -8,17 +8,29 @@
     "horario": "28/10 (qua, 19h), 30/10 (sex, 12h às 13h30) e 31/10 (sáb, 09h às 15h)",
     "vagas": 20,
     "investimento": "Gratuito",
-    "status": "Inscrições Abertas",
-    "andamento": "Ação Cultural Estruturada",
+    "status": "Inscrições Encerradas",
+    "andamento": "Realizada",
     "localizacao": "Centro Cultural Valdon Varjão (28/10) e espaços de vivência",
     "imagem": "/images/santo-de-casa.png",
     "descricao": "",
     "cronograma": [
-      { "data": "28/10/2026", "horario": "Quarta-feira, 19h", "atividade": "Reunião preparatória com os inscritos — Local: Centro Cultural Valdon Varjão" },
-      { "data": "30/10/2026", "horario": "Sexta-feira, 12h às 13h30", "atividade": "Vivência Prática I" },
-      { "data": "31/10/2026", "horario": "Sábado, 09h às 15h", "atividade": "Vivência Prática II e sistematização final" }
+      {
+        "data": "28/10/2026",
+        "horario": "Quarta-feira, 19h",
+        "atividade": "Reunião preparatória com os inscritos — Local: Centro Cultural Valdon Varjão"
+      },
+      {
+        "data": "30/10/2026",
+        "horario": "Sexta-feira, 12h às 13h30",
+        "atividade": "Vivência Prática I"
+      },
+      {
+        "data": "31/10/2026",
+        "horario": "Sábado, 09h às 15h",
+        "atividade": "Vivência Prática II e sistematização final"
+      }
     ],
-    "requisitos": "Disponibilidade em participar das atividades nos horários estabelecidos."
+    "requisitos": "Oficina realizada e concluída."
   },
   {
     "id": "teatro-aberto-publico",
@@ -29,11 +41,11 @@
     "horario": "Quintas-feiras, às 19h",
     "vagas": 25,
     "investimento": "Gratuito",
-    "status": "Inscrições Abertas",
+    "status": "Inscrições Encerradas",
     "andamento": "Em Andamento",
     "localizacao": "CCVV e ALCARTES (Academia de Cultura e Artes do Centro-Oeste)",
     "descricao": "Turma de teatro aberta a toda a comunidade. Iniciação às artes cênicas, interpretação, jogos dramáticos e desinibição.",
-    "requisitos": "Aberto ao público em geral. Entrar em contato pelo WhatsApp para garantir vaga."
+    "requisitos": "Turma em andamento. Inscrições temporariamente encerradas para novas vagas."
   },
   {
     "id": "teatro-em-silencio",

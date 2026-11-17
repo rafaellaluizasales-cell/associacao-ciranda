@@ -92,10 +92,14 @@ import oficinas from '../data/oficinas.json';
                 <a href="#inscricao" class="btn-primary w-full text-xs font-bold uppercase tracking-wider text-center block">
                   Garantir Minha Vaga nesta Oficina
                 </a>
+              ) : oficina.andamento === 'Realizada' ? (
+                <span class="w-full block text-center px-4 py-3 rounded-full text-xs font-bold uppercase tracking-wider bg-stone-100 text-stone-500 border border-stone-200 cursor-default">
+                  Oficina Realizada (Inscrições Encerradas)
+                </span>
               ) : (
-                <a href="#inscricao" class="w-full block text-center px-4 py-3 rounded-full text-xs font-bold uppercase tracking-wider bg-stone-100 text-stone-600 border border-stone-200 hover:bg-stone-200 transition">
+                <span class="w-full block text-center px-4 py-3 rounded-full text-xs font-bold uppercase tracking-wider bg-stone-100 text-stone-600 border border-stone-200 cursor-default">
                   Turma em Andamento (Inscrições Encerradas)
-                </a>
+                </span>
               )}
             </div>
           </div>

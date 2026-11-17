@@ -1,5 +1,49 @@
 [
   {
+    "id": "evt-cultura-em-movimento-mostra-2026",
+    "titulo": "Projeto Cultura em Movimento — Mostra de Teatro, Exposição & Artesanato",
+    "tipo": "Mostra Cultural & Exposição",
+    "data": "2026-11-26",
+    "dataExibicao": "26, 27 e 28 de Novembro",
+    "horario": "Manhã, Tarde e Noite",
+    "local": "Centro Cultural Valdon Varjão (Porto do Baé — Barra do Garças / MT)",
+    "entrada": "Entrada Gratuita • Acessível em Libras",
+    "descricao": "Promovendo arte, inclusão e transformação social por meio do artesanato e do teatro. Programação com 12 apresentações teatrais de diferentes núcleos comunitários e estudantis, e Exposição e Vendas de Artesanato com 11 artesãs locais.",
+    "cronograma": [
+      {
+        "data": "26/11 (Qui, 19h)",
+        "atividade": "Teatro em Silêncio / Comunidade Surda (Curicaca Criativa, Anne Carmo, João do Couto e Juliane Coelho)"
+      },
+      {
+        "data": "27/11 (Sex, Manhã)",
+        "atividade": "08:00 Diferentes (Núcleo APAE BG) • 08:40 Tempero da Vovó • 09:30 Dandara, Nossa Rainha (APAE Aragarças)"
+      },
+      {
+        "data": "27/11 (Sex, Tarde)",
+        "atividade": "13:30 A coroa de Baomy e Bonequinha preta • 14:20 O Julgamento da Humanidade • 15:10 Negro em Ação (Barracão Vila Maria)"
+      },
+      {
+        "data": "27/11 (Sex, Noite)",
+        "atividade": "19:00 O Casamento da Maria Feia (Cia. de Teatro Recriart — Resp.: Eva Souza)"
+      },
+      {
+        "data": "28/11 (Sáb, Tarde)",
+        "atividade": "14:00 Elevador Quebrado (Núcleo IFMT) • 15:00 Memórias de um Beija-Flor (Núcleo CCVV) • 16:00 Antropomórficas (Núcleo UFMT)"
+      },
+      {
+        "data": "28/11 (Sáb, Noite)",
+        "atividade": "19:00 Nascida do Barro e Carne (Juliane Coelho e Yandra Firmo)"
+      },
+      {
+        "data": "27 e 28/11 (Sex e Sáb)",
+        "atividade": "Exposição e Vendas de Artesanato (Coordenação: Sandra Rocha e 11 artesãs)"
+      }
+    ],
+    "status": "Confirmado",
+    "imagem": "/images/agenda/cultura-em-movimento-novembro-2026.jpg",
+    "destaqueHome": true
+  },
+  {
     "id": "evt-santo-de-casa",
     "titulo": "Santo de Casa Não Faz Milagre – Ou Faz?",
     "tipo": "Ação Cultural Estruturada",
@@ -10,14 +54,22 @@
     "entrada": "Gratuito • 20 Vagas",
     "descricao": "Vivência prática e reflexiva sobre produção cultural, acolhimento e valorização profissional dos artistas. Aberto a artistas, produtores, agentes da cultura e público em geral interessado.",
     "cronograma": [
-      { "data": "28/10 (Qua, 19h)", "atividade": "Reunião preparatória com os inscritos — no Centro Cultural Valdon Varjão" },
-      { "data": "30/10 (Sex, 12h às 13h30)", "atividade": "Vivência Prática I" },
-      { "data": "31/10 (Sáb, 09h às 15h)", "atividade": "Vivência Prática II e sistematização final" }
+      {
+        "data": "28/10 (Qua, 19h)",
+        "atividade": "Reunião preparatória com os inscritos — no Centro Cultural Valdon Varjão"
+      },
+      {
+        "data": "30/10 (Sex, 12h às 13h30)",
+        "atividade": "Vivência Prática I"
+      },
+      {
+        "data": "31/10 (Sáb, 09h às 15h)",
+        "atividade": "Vivência Prática II e sistematização final"
+      }
     ],
-    "status": "Inscrições Abertas",
+    "status": "Realizado",
     "imagem": "/images/santo-de-casa.png",
-    "linkInscricao": "/oficinas#inscricao",
-    "destaqueHome": true
+    "destaqueHome": false
   },
   {
     "id": "evt-cultura-movimento",
