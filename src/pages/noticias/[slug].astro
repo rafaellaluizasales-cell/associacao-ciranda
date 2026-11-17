@@ -102,7 +102,7 @@ const { noticia } = Astro.props;
           <img 
             src={noticia.imagem} 
             alt={noticia.titulo} 
-            class="w-full h-auto max-h-[550px] object-cover group-hover:scale-[1.02] transition-transform duration-500"
+            class="w-full h-auto max-h-[580px] object-contain mx-auto group-hover:scale-[1.01] transition-transform duration-500"
           />
           <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
             <span class="bg-stone-950/85 text-white text-xs px-3.5 py-2 rounded-full font-bold shadow-lg flex items-center gap-1.5">
@@ -116,7 +116,7 @@ const { noticia } = Astro.props;
 
         {noticia.legendaImagem && (
           <figcaption class="text-xs text-stone-500 italic text-center">
-            Foto: {noticia.legendaImagem}
+            {noticia.legendaImagem}
           </figcaption>
         )}
       </figure>
