@@ -92,7 +92,7 @@ const canonicalURL = new URL(Astro.url.pathname, institucional.urlOficial);
             id="modal-zoom-reset" 
             type="button" 
             class="px-2.5 sm:px-3 h-8 sm:h-9 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-200 font-mono text-xs font-semibold flex items-center justify-center transition shadow-sm"
-            title="Redefinir Zoom (100%)"
+            title="Ajustar à Tela (100%)"
             aria-label="Redefinir Zoom"
           >
             <span id="modal-zoom-level">100%</span>
@@ -124,31 +124,29 @@ const canonicalURL = new URL(Astro.url.pathname, institucional.urlOficial);
       <!-- Main Image Viewport Area -->
       <div 
         id="modal-image-viewport" 
-        class="relative flex-grow w-full max-w-6xl my-2 flex items-center justify-center overflow-auto rounded-2xl bg-stone-950/80 border border-stone-800/80 p-2 select-none"
+        class="relative flex-grow w-full max-w-6xl my-2 overflow-auto rounded-2xl bg-stone-950/95 border border-stone-800/80 p-3 sm:p-6 select-none flex"
         onclick="event.stopPropagation()"
       >
-        <div class="min-w-full min-h-full flex items-center justify-center p-2">
-          <img 
-            id="global-modal-img" 
-            src="" 
-            alt="Imagem Ampliada" 
-            class="transition-transform duration-200 ease-out origin-center select-none max-h-[80vh] max-w-full object-contain cursor-zoom-in"
-            draggable="false"
-          />
-        </div>
+        <img 
+          id="global-modal-img" 
+          src="" 
+          alt="Imagem Ampliada" 
+          class="m-auto transition-all duration-200 ease-out select-none max-h-[78vh] max-w-full object-contain cursor-zoom-in rounded-lg shadow-2xl"
+          draggable="false"
+        />
       </div>
 
       <!-- Bottom Hint Bar -->
-      <div class="text-[11px] text-stone-400 py-1 flex items-center gap-2 text-center" onclick="event.stopPropagation()">
-        <span>💡 Use os botões <strong>+</strong> e <strong>−</strong>, o scroll do mouse ou clique na imagem para ampliar e ler todos os detalhes com nitidez.</span>
+      <div class="text-xs text-stone-300 py-1 flex items-center justify-center gap-2 text-center" onclick="event.stopPropagation()">
+        <span>💡 <strong>Dica no computador:</strong> clique na imagem ou use <strong>+</strong> / <strong>−</strong> para aproximar, e role a roda do mouse para ler o cartaz de cima a baixo.</span>
       </div>
     </div>
 
     <script is:inline>
-      let currentZoom = 1;
-      const MIN_ZOOM = 0.8;
-      const MAX_ZOOM = 4.0;
-      const ZOOM_STEP = 0.35;
+      let currentZoom = 1.0;
+      const MIN_ZOOM = 1.0;
+      const MAX_ZOOM = 2.4;
+      const ZOOM_STEP = 0.25;
 
       function updateZoom(newZoom) {
         currentZoom = Math.min(Math.max(newZoom, MIN_ZOOM), MAX_ZOOM);
@@ -157,19 +155,35 @@ const canonicalURL = new URL(Astro.url.pathname, institucional.urlOficial);
         const viewport = document.getElementById('modal-image-viewport');
         
         if (img) {
-          img.style.transform = `scale(${currentZoom})`;
-          if (currentZoom > 1) {
-            img.style.maxHeight = 'none';
-            img.style.maxWidth = 'none';
-            img.classList.remove('cursor-zoom-in');
-            img.classList.add('cursor-grab');
-            viewport?.classList.add('cursor-grab');
-          } else {
-            img.style.maxHeight = '80vh';
+          if (currentZoom <= 1.02) {
+            currentZoom = 1.0;
+            img.style.height = 'auto';
+            img.style.maxHeight = '78vh';
             img.style.maxWidth = '100%';
-            img.classList.remove('cursor-grab', 'cursor-grabbing');
+            img.style.width = 'auto';
+            img.classList.remove('cursor-zoom-out');
             img.classList.add('cursor-zoom-in');
-            viewport?.classList.remove('cursor-grab', 'cursor-grabbing');
+          } else {
+            // Desktop proportional zoom: scale relative to screen height
+            const isPortrait = (img.naturalHeight || 1) >= (img.naturalWidth || 1);
+            const baseH = Math.min(window.innerHeight * 0.78, 720);
+            
+            if (isPortrait) {
+              const targetH = Math.round(baseH * currentZoom);
+              img.style.height = targetH + 'px';
+              img.style.maxHeight = 'none';
+              img.style.maxWidth = 'none';
+              img.style.width = 'auto';
+            } else {
+              const baseW = Math.min((viewport ? viewport.clientWidth : 800) * 0.9, 900);
+              const targetW = Math.round(baseW * currentZoom);
+              img.style.width = targetW + 'px';
+              img.style.maxWidth = 'none';
+              img.style.maxHeight = 'none';
+              img.style.height = 'auto';
+            }
+            img.classList.remove('cursor-zoom-in');
+            img.classList.add('cursor-zoom-out');
           }
         }
         if (levelLabel) {
@@ -184,12 +198,11 @@ const canonicalURL = new URL(Astro.url.pathname, institucional.urlOficial);
         if (modal && img) {
           img.src = src;
           if (cap) cap.textContent = caption || 'Visualização da Imagem';
-          currentZoom = 1;
-          updateZoom(1);
+          currentZoom = 1.0;
+          updateZoom(1.0);
           modal.classList.remove('hidden');
           document.body.style.overflow = 'hidden';
           
-          // Center scroll in viewport
           const viewport = document.getElementById('modal-image-viewport');
           if (viewport) {
             viewport.scrollLeft = 0;
@@ -203,8 +216,8 @@ const canonicalURL = new URL(Astro.url.pathname, institucional.urlOficial);
         if (modal) {
           modal.classList.add('hidden');
           document.body.style.overflow = '';
-          currentZoom = 1;
-          updateZoom(1);
+          currentZoom = 1.0;
+          updateZoom(1.0);
         }
       };
 
@@ -213,7 +226,6 @@ const canonicalURL = new URL(Astro.url.pathname, institucional.urlOficial);
         if (e.key === 'Escape') window.closeImageModal();
       });
 
-      // Bind controls once
       function setupZoomControls() {
         const btnIn = document.getElementById('modal-zoom-in');
         const btnOut = document.getElementById('modal-zoom-out');
@@ -241,30 +253,40 @@ const canonicalURL = new URL(Astro.url.pathname, institucional.urlOficial);
           btnReset.dataset.bound = 'true';
           btnReset.addEventListener('click', (e) => {
             e.stopPropagation();
-            updateZoom(1);
-          });
-        }
-
-        // Click / double-click on image to toggle zoom
-        if (img && !img.dataset.bound) {
-          img.dataset.bound = 'true';
-          img.addEventListener('click', (e) => {
-            e.stopPropagation();
-            if (currentZoom > 1.2) {
-              updateZoom(1);
-            } else {
-              updateZoom(2.2);
+            updateZoom(1.0);
+            if (viewport) {
+              viewport.scrollTop = 0;
+              viewport.scrollLeft = 0;
             }
           });
         }
 
-        // Wheel to zoom inside viewport
+        // Click on image toggles between 100% and 145% (comfortable reading size)
+        if (img && !img.dataset.bound) {
+          img.dataset.bound = 'true';
+          img.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (currentZoom > 1.05) {
+              updateZoom(1.0);
+              if (viewport) {
+                viewport.scrollTop = 0;
+              }
+            } else {
+              updateZoom(1.45);
+            }
+          });
+        }
+
+        // Mouse wheel: Ctrl+Wheel zooms; normal Wheel scrolls vertically naturally!
         if (viewport && !viewport.dataset.bound) {
           viewport.dataset.bound = 'true';
           viewport.addEventListener('wheel', (e) => {
-            e.preventDefault();
-            const delta = e.deltaY < 0 ? ZOOM_STEP : -ZOOM_STEP;
-            updateZoom(currentZoom + delta);
+            if (e.ctrlKey) {
+              e.preventDefault();
+              const delta = e.deltaY < 0 ? ZOOM_STEP : -ZOOM_STEP;
+              updateZoom(currentZoom + delta);
+            }
+            // Normal wheel: default browser behavior scrolls the viewport up and down!
           }, { passive: false });
 
           // Drag to Pan when zoomed
@@ -275,10 +297,10 @@ const canonicalURL = new URL(Astro.url.pathname, institucional.urlOficial);
           let scrollTop = 0;
 
           viewport.addEventListener('mousedown', (e) => {
-            if (currentZoom <= 1) return;
+            if (currentZoom <= 1.05) return;
+            if (e.button !== 0) return;
             isDragging = true;
             viewport.classList.add('cursor-grabbing');
-            viewport.classList.remove('cursor-grab');
             startX = e.pageX - viewport.offsetLeft;
             startY = e.pageY - viewport.offsetTop;
             scrollLeft = viewport.scrollLeft;
@@ -286,10 +308,9 @@ const canonicalURL = new URL(Astro.url.pathname, institucional.urlOficial);
           });
 
           window.addEventListener('mouseup', () => {
-            isDragging = false;
-            if (currentZoom > 1) {
+            if (isDragging) {
+              isDragging = false;
               viewport.classList.remove('cursor-grabbing');
-              viewport.classList.add('cursor-grab');
             }
           });
 
@@ -298,8 +319,8 @@ const canonicalURL = new URL(Astro.url.pathname, institucional.urlOficial);
             e.preventDefault();
             const x = e.pageX - viewport.offsetLeft;
             const y = e.pageY - viewport.offsetTop;
-            const walkX = (x - startX) * 1.5;
-            const walkY = (y - startY) * 1.5;
+            const walkX = (x - startX);
+            const walkY = (y - startY);
             viewport.scrollLeft = scrollLeft - walkX;
             viewport.scrollTop = scrollTop - walkY;
           });
