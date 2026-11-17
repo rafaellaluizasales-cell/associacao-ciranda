@@ -60,39 +60,141 @@ const canonicalURL = new URL(Astro.url.pathname, institucional.urlOficial);
     </main>
     <Footer />
 
-    <!-- Global Fullscreen Image Expand Modal -->
+    <!-- Global Fullscreen Image Expand Modal with Interactive Zoom -->
     <div 
       id="global-image-modal" 
-      class="fixed inset-0 z-[100] hidden bg-black/90 backdrop-blur-md flex items-center justify-center p-4 transition-all duration-300"
+      class="fixed inset-0 z-[100] hidden bg-black/95 backdrop-blur-md flex flex-col items-center justify-between p-2 sm:p-4 select-none"
       onclick="window.closeImageModal()"
     >
-      <div class="relative max-w-5xl w-full bg-stone-950 rounded-3xl overflow-hidden border border-stone-800 shadow-2xl" onclick="event.stopPropagation()">
-        <button 
-          onclick="window.closeImageModal()" 
-          class="absolute top-4 right-4 z-20 w-11 h-11 bg-black/70 text-white rounded-full flex items-center justify-center text-xl font-bold hover:bg-ciranda-terracotta transition shadow-lg"
-          aria-label="Fechar"
-        >
-          ✕
-        </button>
-        <div class="bg-black flex items-center justify-center max-h-[80vh] overflow-hidden p-2">
-          <img id="global-modal-img" src="" alt="Imagem Ampliada" class="w-auto h-auto max-h-[78vh] max-w-full object-contain rounded-xl" />
+      <!-- Top Control Bar -->
+      <div 
+        class="w-full max-w-6xl flex items-center justify-between gap-3 px-3 py-2.5 bg-stone-900/90 text-white rounded-2xl border border-stone-800 shadow-2xl z-20 shrink-0"
+        onclick="event.stopPropagation()"
+      >
+        <div class="flex items-center gap-2 truncate pr-2">
+          <span class="inline-block w-2.5 h-2.5 rounded-full bg-ciranda-amber shrink-0"></span>
+          <h4 id="global-modal-caption" class="text-xs sm:text-sm font-serif font-bold text-stone-200 truncate">Visualização da Imagem</h4>
         </div>
-        <div class="p-5 bg-stone-900 text-white">
-          <h4 id="global-modal-caption" class="text-lg font-serif font-bold text-stone-100"></h4>
+
+        <!-- Zoom & Action Controls -->
+        <div class="flex items-center gap-1.5 sm:gap-2 shrink-0">
+          <button 
+            id="modal-zoom-out" 
+            type="button" 
+            class="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-stone-800 hover:bg-stone-700 text-white font-bold flex items-center justify-center text-base sm:text-lg transition shadow-sm"
+            title="Reduzir Zoom (-)"
+            aria-label="Reduzir Zoom"
+          >
+            −
+          </button>
+          
+          <button 
+            id="modal-zoom-reset" 
+            type="button" 
+            class="px-2.5 sm:px-3 h-8 sm:h-9 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-200 font-mono text-xs font-semibold flex items-center justify-center transition shadow-sm"
+            title="Redefinir Zoom (100%)"
+            aria-label="Redefinir Zoom"
+          >
+            <span id="modal-zoom-level">100%</span>
+          </button>
+
+          <button 
+            id="modal-zoom-in" 
+            type="button" 
+            class="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-stone-800 hover:bg-stone-700 text-white font-bold flex items-center justify-center text-base sm:text-lg transition shadow-sm"
+            title="Aumentar Zoom (+)"
+            aria-label="Aumentar Zoom"
+          >
+            +
+          </button>
+
+          <div class="w-px h-5 bg-stone-700 mx-1"></div>
+
+          <button 
+            onclick="window.closeImageModal()" 
+            class="w-8 h-8 sm:w-9 sm:h-9 bg-red-600/80 hover:bg-red-600 text-white rounded-lg flex items-center justify-center text-sm font-bold transition shadow-sm"
+            aria-label="Fechar Modal"
+            title="Fechar (Esc)"
+          >
+            ✕
+          </button>
         </div>
+      </div>
+
+      <!-- Main Image Viewport Area -->
+      <div 
+        id="modal-image-viewport" 
+        class="relative flex-grow w-full max-w-6xl my-2 flex items-center justify-center overflow-auto rounded-2xl bg-stone-950/80 border border-stone-800/80 p-2 select-none"
+        onclick="event.stopPropagation()"
+      >
+        <div class="min-w-full min-h-full flex items-center justify-center p-2">
+          <img 
+            id="global-modal-img" 
+            src="" 
+            alt="Imagem Ampliada" 
+            class="transition-transform duration-200 ease-out origin-center select-none max-h-[80vh] max-w-full object-contain cursor-zoom-in"
+            draggable="false"
+          />
+        </div>
+      </div>
+
+      <!-- Bottom Hint Bar -->
+      <div class="text-[11px] text-stone-400 py-1 flex items-center gap-2 text-center" onclick="event.stopPropagation()">
+        <span>💡 Use os botões <strong>+</strong> e <strong>−</strong>, o scroll do mouse ou clique na imagem para ampliar e ler todos os detalhes com nitidez.</span>
       </div>
     </div>
 
     <script is:inline>
+      let currentZoom = 1;
+      const MIN_ZOOM = 0.8;
+      const MAX_ZOOM = 4.0;
+      const ZOOM_STEP = 0.35;
+
+      function updateZoom(newZoom) {
+        currentZoom = Math.min(Math.max(newZoom, MIN_ZOOM), MAX_ZOOM);
+        const img = document.getElementById('global-modal-img');
+        const levelLabel = document.getElementById('modal-zoom-level');
+        const viewport = document.getElementById('modal-image-viewport');
+        
+        if (img) {
+          img.style.transform = `scale(${currentZoom})`;
+          if (currentZoom > 1) {
+            img.style.maxHeight = 'none';
+            img.style.maxWidth = 'none';
+            img.classList.remove('cursor-zoom-in');
+            img.classList.add('cursor-grab');
+            viewport?.classList.add('cursor-grab');
+          } else {
+            img.style.maxHeight = '80vh';
+            img.style.maxWidth = '100%';
+            img.classList.remove('cursor-grab', 'cursor-grabbing');
+            img.classList.add('cursor-zoom-in');
+            viewport?.classList.remove('cursor-grab', 'cursor-grabbing');
+          }
+        }
+        if (levelLabel) {
+          levelLabel.textContent = `${Math.round(currentZoom * 100)}%`;
+        }
+      }
+
       window.openImageModal = function(src, caption) {
         const modal = document.getElementById('global-image-modal');
         const img = document.getElementById('global-modal-img');
         const cap = document.getElementById('global-modal-caption');
         if (modal && img) {
           img.src = src;
-          if (cap) cap.textContent = caption || '';
+          if (cap) cap.textContent = caption || 'Visualização da Imagem';
+          currentZoom = 1;
+          updateZoom(1);
           modal.classList.remove('hidden');
           document.body.style.overflow = 'hidden';
+          
+          // Center scroll in viewport
+          const viewport = document.getElementById('modal-image-viewport');
+          if (viewport) {
+            viewport.scrollLeft = 0;
+            viewport.scrollTop = 0;
+          }
         }
       };
 
@@ -101,12 +203,115 @@ const canonicalURL = new URL(Astro.url.pathname, institucional.urlOficial);
         if (modal) {
           modal.classList.add('hidden');
           document.body.style.overflow = '';
+          currentZoom = 1;
+          updateZoom(1);
         }
       };
 
+      // Close on Escape
       document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') window.closeImageModal();
       });
+
+      // Bind controls once
+      function setupZoomControls() {
+        const btnIn = document.getElementById('modal-zoom-in');
+        const btnOut = document.getElementById('modal-zoom-out');
+        const btnReset = document.getElementById('modal-zoom-reset');
+        const viewport = document.getElementById('modal-image-viewport');
+        const img = document.getElementById('global-modal-img');
+
+        if (btnIn && !btnIn.dataset.bound) {
+          btnIn.dataset.bound = 'true';
+          btnIn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            updateZoom(currentZoom + ZOOM_STEP);
+          });
+        }
+
+        if (btnOut && !btnOut.dataset.bound) {
+          btnOut.dataset.bound = 'true';
+          btnOut.addEventListener('click', (e) => {
+            e.stopPropagation();
+            updateZoom(currentZoom - ZOOM_STEP);
+          });
+        }
+
+        if (btnReset && !btnReset.dataset.bound) {
+          btnReset.dataset.bound = 'true';
+          btnReset.addEventListener('click', (e) => {
+            e.stopPropagation();
+            updateZoom(1);
+          });
+        }
+
+        // Click / double-click on image to toggle zoom
+        if (img && !img.dataset.bound) {
+          img.dataset.bound = 'true';
+          img.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (currentZoom > 1.2) {
+              updateZoom(1);
+            } else {
+              updateZoom(2.2);
+            }
+          });
+        }
+
+        // Wheel to zoom inside viewport
+        if (viewport && !viewport.dataset.bound) {
+          viewport.dataset.bound = 'true';
+          viewport.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            const delta = e.deltaY < 0 ? ZOOM_STEP : -ZOOM_STEP;
+            updateZoom(currentZoom + delta);
+          }, { passive: false });
+
+          // Drag to Pan when zoomed
+          let isDragging = false;
+          let startX = 0;
+          let startY = 0;
+          let scrollLeft = 0;
+          let scrollTop = 0;
+
+          viewport.addEventListener('mousedown', (e) => {
+            if (currentZoom <= 1) return;
+            isDragging = true;
+            viewport.classList.add('cursor-grabbing');
+            viewport.classList.remove('cursor-grab');
+            startX = e.pageX - viewport.offsetLeft;
+            startY = e.pageY - viewport.offsetTop;
+            scrollLeft = viewport.scrollLeft;
+            scrollTop = viewport.scrollTop;
+          });
+
+          window.addEventListener('mouseup', () => {
+            isDragging = false;
+            if (currentZoom > 1) {
+              viewport.classList.remove('cursor-grabbing');
+              viewport.classList.add('cursor-grab');
+            }
+          });
+
+          viewport.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            e.preventDefault();
+            const x = e.pageX - viewport.offsetLeft;
+            const y = e.pageY - viewport.offsetTop;
+            const walkX = (x - startX) * 1.5;
+            const walkY = (y - startY) * 1.5;
+            viewport.scrollLeft = scrollLeft - walkX;
+            viewport.scrollTop = scrollTop - walkY;
+          });
+        }
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', setupZoomControls);
+      } else {
+        setupZoomControls();
+      }
+      document.addEventListener('astro:page-load', setupZoomControls);
     </script>
   </body>
 </html>
