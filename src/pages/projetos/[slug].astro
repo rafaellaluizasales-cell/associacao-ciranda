@@ -59,11 +59,99 @@ const { projeto } = Astro.props;
         <!-- Main Synopsis Content -->
         <div class="lg:col-span-8 space-y-8">
           
-          <div class="bg-white p-8 rounded-3xl border border-ciranda-border shadow-soft space-y-4">
-            <h3 class="text-2xl font-serif font-bold text-ciranda-brown">{projeto.tipo === 'projeto' ? 'Sobre o Projeto' : 'Sinopse do Espetáculo'}</h3>
-            <p class="text-stone-700 leading-relaxed whitespace-pre-line text-base">
-              {projeto.sinopse}
-            </p>
+          <div class="bg-white p-6 sm:p-10 rounded-3xl border border-ciranda-border shadow-soft space-y-6">
+            <div class="border-b border-ciranda-border pb-4 flex flex-wrap items-center justify-between gap-2">
+              <h3 class="text-2xl font-serif font-bold text-ciranda-brown">
+                {projeto.tipo === 'projeto' ? 'Sobre o Projeto' : 'Sinopse do Espetáculo'}
+              </h3>
+              {projeto.autor && (
+                <div class="flex items-center gap-2 text-xs sm:text-sm text-stone-600">
+                  <span class="px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-900 font-bold text-[11px] uppercase tracking-wider">
+                    Texto & Autoria
+                  </span>
+                  <span class="font-semibold text-stone-800">{projeto.autor}</span>
+                </div>
+              )}
+            </div>
+
+            {projeto.conteudoEditorial && projeto.conteudoEditorial.length > 0 ? (
+              <div class="space-y-6 text-stone-700 leading-relaxed text-base sm:text-lg">
+                {projeto.conteudoEditorial.map((bloco: any, idx: number) => {
+                  if (bloco.tipo === 'imagem') {
+                    return (
+                      <figure class="my-6 space-y-2">
+                        <div 
+                          class="rounded-2xl overflow-hidden border border-ciranda-border shadow-soft group cursor-pointer bg-stone-100"
+                          title="Clique para ampliar a imagem"
+                          onclick={`if(window.openImageModal){ window.openImageModal('${bloco.url}', '${bloco.legenda || projeto.titulo}'); }`}
+                        >
+                          <img 
+                            src={bloco.url} 
+                            alt={bloco.legenda || `Foto do projeto ${projeto.titulo}`} 
+                            class="w-full h-auto max-h-[500px] object-cover group-hover:scale-[1.01] transition duration-300"
+                          />
+                        </div>
+                        {bloco.legenda && (
+                          <figcaption class="text-xs text-stone-500 italic text-center px-2">
+                            {bloco.legenda}
+                          </figcaption>
+                        )}
+                      </figure>
+                    );
+                  }
+
+                  if (bloco.tipo === 'subtitulo') {
+                    return (
+                      <div class="pt-6 pb-2">
+                        <h4 class="text-xl sm:text-2xl font-serif font-black text-ciranda-brown border-l-4 border-ciranda-amber pl-4 py-1 leading-snug">
+                          {bloco.texto}
+                        </h4>
+                      </div>
+                    );
+                  }
+
+                  if (bloco.tipo === 'paragrafo') {
+                    return (
+                      <p class="text-stone-700 leading-relaxed text-justify">
+                        {bloco.texto}
+                      </p>
+                    );
+                  }
+
+                  if (bloco.tipo === 'livros') {
+                    return (
+                      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-2">
+                        {bloco.itens.map((livro: any) => (
+                          <div class="p-4 rounded-2xl bg-amber-50/60 border border-ciranda-amber/40 shadow-sm flex items-start gap-3 hover:bg-amber-50 transition">
+                            <span class="text-2xl shrink-0">📖</span>
+                            <div class="space-y-0.5 text-xs sm:text-sm">
+                              <strong class="font-serif font-bold text-ciranda-brown block text-sm sm:text-base">
+                                {livro.titulo}
+                              </strong>
+                              <span class="text-stone-600 font-medium block">
+                                Autor(a): {livro.autor}
+                              </span>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    );
+                  }
+
+                  return null;
+                })}
+
+                {projeto.autor && (
+                  <div class="pt-6 border-t border-stone-200 text-xs sm:text-sm text-stone-500 italic flex items-center justify-between">
+                    <span>Texto e reportagem: <strong class="text-stone-800">{projeto.autor}</strong></span>
+                  </div>
+                )}
+              </div>
+            ) : (
+              <p class="text-stone-700 leading-relaxed whitespace-pre-line text-base">
+                {projeto.sinopse}
+              </p>
+            )}
           </div>
 
           <!-- Gallery Preview if any -->
