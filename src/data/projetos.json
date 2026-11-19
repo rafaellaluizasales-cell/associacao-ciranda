@@ -15,6 +15,36 @@
     "destaqueHome": true,
     "galeria": [
       "/images/cultura-em-movimento.jpg"
+    ],
+    "tipo": "projeto"
+  },
+  {
+    "id": "carrossel-da-leitura",
+    "slug": "carrossel-da-leitura",
+    "tipo": "projeto",
+    "titulo": "Carrossel da Leitura: Biblioteca Brincante",
+    "subtitulo": "Carrossel da Leitura encerra segunda edição com novos acervos, formação de leitores e valorização da literatura mato-grossense",
+    "categoria": "Literatura & Formação de Leitores",
+    "resumo": "Projeto amplia o acesso à literatura infantil em escolas e comunidades de MT e promove a publicação de cinco obras inéditas de autores mato-grossenses, distribuídas gratuitamente a mais de 60 instituições.",
+    "sinopse": "Em mais uma etapa de sucesso, o projeto “Carrossel da Leitura: Biblioteca Brincante” percorreu diversas escolas e comunidades de diferentes regiões de Mato Grosso com uma proposta que começa pelo acesso aos livros, mas vai além das estantes: aproximar crianças e jovens da literatura e estimular o hábito da leitura.\n\nRealizada pela Associação Cultural Ciranda, de Barra do Garças, a iniciativa contemplou regiões periféricas, escolas da zona rural e outras entidades de Cuiabá, além de instituições em Coxipó do Ouro, Chapada dos Guimarães e Barra do Garças. Nesta segunda edição, o projeto combinou implantação de espaços de leitura, atividades lúdicas, formação de educadores e circulação de obras produzidas por autores mato-grossenses.\n\nNovos espaços, novas experiências com a leitura\nEntre as ações está a implantação de cinco Pontos de Leitura, cada um equipado com 70 livros infanto-juvenis e dois racks expositores. A curadoria ficou por conta do professor Paulo Wagner Moura, que reuniu obras clássicas e contemporâneas da literatura brasileira e internacional — com nomes como Ruth Rocha, Ana Maria Machado, Ziraldo, Monteiro Lobato, Daniel Munduruku, entre outros —, oferecendo aos leitores experiências literárias diversas e ampliando o acesso a novas narrativas. Paulo Wagner é jornalista, escritor, documentarista, ensaísta e mestre em Estudos de Linguagem pela Universidade Federal de Mato Grosso (UFMT).\n\nA chegada dos livros às unidades escolares foi acompanhada por apresentações de contação de histórias de Alicce Oliveira e do grupo Malacriada, com a participação do ator e palhaço Júnior Antunes. Mais de 1.500 crianças participaram das atividades, que reuniram histórias, brincadeiras e interação.\n\nPara Ivana Moreira, diretora da Escola Thermozina de Siqueira, em Chapada dos Guimarães, a iniciativa foi recebida como uma oportunidade de ampliar o repertório dos estudantes e incentivar o trabalho dos professores: “O projeto permitiu que mais de 500 alunos tivessem acesso a um acervo literário de qualidade, além de oferecer capacitação às professoras para estimular a leitura nas atividades escolares”, completou.\n\nA literatura mato-grossense também ganha as estantes\nUm dos diferenciais desta edição foi a publicação de cinco livros inéditos de literatura infantil de autores mato-grossenses, aproximando a produção regional do público local. Ao todo, foram distribuídos gratuitamente 1.500 exemplares, destinados a mais de 60 instituições educacionais e culturais. Cada instituição recebeu cinco coleções, compostas pelos cinco títulos selecionados, totalizando 25 exemplares.\n\nA coleção reúne obras de Patricia Soares Jiipy, Paulo Wagner, Márcio Monzilar Corezomae, Juliano Moreno e Wanderley Wasconcelos. Além da distribuição institucional, os autores receberam exemplares para lançamentos individuais, promovendo a produção e a circulação da literatura local e inserindo escritores mato-grossenses nas estantes ao lado de nomes já consagrados da literatura infantil brasileira e internacional.\n\nFormar leitores também é formar mediadores\nOutro eixo do projeto foi a preparação de educadores e pessoas da comunidade para trabalhar com a leitura junto às crianças e jovens. Foram realizadas 10 oficinas de atividades formativas, com conteúdos sobre literatura infantil, mediação de leitura e contação de histórias. As aulas foram ministradas pelo mestre Paulo Wagner e o escritor e contador de histórias João Luiz do Couto, membro da Academia Brasileira de Contadores de Histórias e da Academia de Letras, Cultura e Artes do Centro-Oeste.\n\nJoão Luiz defende que a formação de mediadores é essencial para que a leitura deixe de ser uma atividade restrita às ações escolares. Para ele, “a contação de histórias e as práticas lúdicas aproximam os jovens da literatura. A proposta é que esse incentivo continue no cotidiano por meio de professores e mediadores, e não termine com a entrega dos acervos”.\n\nA segunda edição do Carrossel da Leitura contou com o investimento de R$ 200 mil, provenientes do Governo do Estado de Mato Grosso, por meio da Secretaria de Estado de Cultura, Esporte e Lazer (SECEL-MT), via emenda parlamentar do Deputado Estadual Lúdio Cabral.\n\nConheça os cinco livros da coleção:\n• O segredo de Clara e sua boneca Vivi — Patricia Soares Jiipy\n• A burrinha da felicidade — Paulo Wagner\n• IMI IXIPÁ / Minha Casa — Márcio Monzilar Corezomae\n• Clarice & Clarissa — Juliano Moreno\n• Esperança — Wanderley Wasconcelos",
+    "direcao": "Paulo Wagner Moura (Curadoria e Coordenação) | Juliane Maciel Coelho (Coordenação Geral)",
+    "elencoFicha": "Realização: Associação Cultural Ciranda | Fomento: Secretaria de Estado de Cultura, Esporte e Lazer de Mato Grosso (SECEL-MT) via Emenda Parlamentar do Deputado Estadual Lúdio Cabral | Curadoria dos Acervos: Prof. Paulo Wagner | Oficinas de Mediação: Paulo Wagner e João Luiz do Couto | Contação de Histórias: Alicce Oliveira e Grupo Malacriada (Júnior Antunes) | Assessoria de Imprensa: Layra Santana",
+    "duracao": "2ª Edição (Projeto Concluído)",
+    "classificacao": "Livre para Todas as Idades",
+    "status": "Projeto Realizado",
+    "imagem": "/images/projetos/carrossel-da-leitura/foto-01.jpg",
+    "destaqueHome": true,
+    "galeria": [
+      "/images/projetos/carrossel-da-leitura/foto-01.jpg",
+      "/images/projetos/carrossel-da-leitura/foto-02.jpg",
+      "/images/projetos/carrossel-da-leitura/foto-03.jpg",
+      "/images/projetos/carrossel-da-leitura/foto-04.jpg",
+      "/images/projetos/carrossel-da-leitura/foto-05.jpg",
+      "/images/projetos/carrossel-da-leitura/foto-06.jpg",
+      "/images/projetos/carrossel-da-leitura/foto-07.jpg",
+      "/images/projetos/carrossel-da-leitura/foto-08.jpg",
+      "/images/projetos/carrossel-da-leitura/foto-09.jpg",
+      "/images/projetos/carrossel-da-leitura/foto-10.jpg"
     ]
   },
   {
@@ -49,7 +79,8 @@
     "videos": [
       "/videos/nascida-do-barro/video-01.mp4",
       "/videos/nascida-do-barro/video-02.mp4"
-    ]
+    ],
+    "tipo": "peca"
   },
   {
     "id": "tempero-da-vovo",
@@ -72,7 +103,8 @@
       "/images/tempero-da-vovo/foto-04.jpg",
       "/images/tempero-da-vovo/foto-05.jpg",
       "/images/tempero-da-vovo/foto-06.jpg"
-    ]
+    ],
+    "tipo": "peca"
   },
   {
     "id": "elevador-quebrado",
@@ -96,6 +128,7 @@
       "/images/elevador-quebrado/IMG_9670.jpg",
       "/images/elevador-quebrado/IMG_9744.jpg",
       "/images/elevador-quebrado/IMG_9673.jpg"
-    ]
+    ],
+    "tipo": "peca"
   }
 ]

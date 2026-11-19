@@ -4,7 +4,7 @@ import ProjectCard from '../components/ProjectCard.astro';
 import projetos from '../data/projetos.json';
 
 // Na aba Peças: Nascida do Barro, O Tempero da Vovó, O Elevador Quebrado
-const pecasTeatrais = projetos.filter(p => p.slug !== 'cultura-em-movimento');
+const pecasTeatrais = projetos.filter(p => p.tipo === 'peca');
 ---
 
 <Layout 

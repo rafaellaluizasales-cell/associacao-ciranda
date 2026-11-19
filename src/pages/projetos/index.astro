@@ -2,7 +2,8 @@
 import Layout from '../../layouts/Layout.astro';
 import ProjectCard from '../../components/ProjectCard.astro';
 import projetos from '../../data/projetos.json';
-const projetosApenas = projetos.filter(p => p.slug === 'cultura-em-movimento');
+
+const projetosApenas = projetos.filter(p => p.tipo === 'projeto');
 ---
 
 <Layout 
