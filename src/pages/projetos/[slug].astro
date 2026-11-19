@@ -11,6 +11,15 @@ export function getStaticPaths() {
 }
 
 const { projeto } = Astro.props;
+
+// Filtrar as imagens que já estão no corpo do texto para que no final fiquem apenas as fotos restantes
+const imagensNoCorpo = new Set(
+  projeto.conteudoEditorial
+    ?.filter((b: any) => b.tipo === 'imagem')
+    ?.map((b: any) => b.url) || []
+);
+
+const galeriaRestante = projeto.galeria?.filter((imgUrl: string) => !imagensNoCorpo.has(imgUrl)) || [];
 ---
 
 <Layout 
@@ -154,17 +163,24 @@ const { projeto } = Astro.props;
             )}
           </div>
 
-          <!-- Gallery Preview if any -->
-          {projeto.galeria && projeto.galeria.length > 0 && (
-            <div class="space-y-4">
-              <h3 class="text-2xl font-serif font-bold text-ciranda-brown">{projeto.tipo === 'projeto' ? 'Registros da Execução do Projeto' : 'Registros Fotográficos'}</h3>
+          <!-- Gallery Preview for remaining images -->
+          {galeriaRestante && galeriaRestante.length > 0 && (
+            <div class="space-y-4 pt-2">
+              <div class="space-y-1">
+                <h3 class="text-2xl font-serif font-bold text-ciranda-brown">
+                  {projeto.tipo === 'projeto' ? 'Mais Registros Fotográficos do Projeto' : 'Registros Fotográficos'}
+                </h3>
+                <p class="text-xs sm:text-sm text-stone-500">
+                  Outros momentos e registros da execução das atividades nas escolas e instituições.
+                </p>
+              </div>
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {projeto.galeria.map((imgUrl, idx) => (
+                {galeriaRestante.map((imgUrl: string, idx: number) => (
                   <img 
                     src={imgUrl} 
-                    alt={`Foto ${idx + 1} de ${projeto.titulo}`} 
-                    class="rounded-2xl h-52 w-full object-cover border border-ciranda-border shadow-soft hover:scale-105 transition duration-300 cursor-pointer"
-                    onclick={`if(window.openImageModal){ window.openImageModal('${imgUrl}', '${projeto.titulo} - Foto ${idx + 1}'); }`}
+                    alt={`Registro fotográfico complementar ${idx + 1} de ${projeto.titulo}`} 
+                    class="rounded-2xl h-56 w-full object-cover border border-ciranda-border shadow-soft hover:scale-[1.02] transition duration-300 cursor-pointer"
+                    onclick={`if(window.openImageModal){ window.openImageModal('${imgUrl}', '${projeto.titulo} - Registro ${idx + 1}'); }`}
                   />
                 ))}
               </div>
